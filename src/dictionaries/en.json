@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Our Projects",
+    "blog": "Blog",
+    "resources": "Resources",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "hero": {
+    "slogan": "Innovation at the service of training in Africa",
+    "subtitle": "We build the future of African education through digital technologies, interactive animation, and artificial intelligence.",
+    "ctaProjects": "Discover our projects",
+    "ctaContact": "Contact us",
+    "highlightBadge": "Flagship Project: Les Gardiens du Quartier"
+  },
+  "about": {
+    "title": "Who Are We?",
+    "storyTitle": "Our Story",
+    "story": "Founded on the deep belief that technology can bridge educational gaps in Africa, Africa Impact Studio blends technical excellence with social commitment. We believe that African youth deserve world-class educational content rooted in their own cultural realities.",
+    "missionTitle": "Our Mission",
+    "mission": "Sustainably transform the way Africans learn, train, and develop skills through 3D animation, cybersecurity, and artificial intelligence.",
+    "visionTitle": "Our Vision",
+    "vision": "Become the continental benchmark in educational technologies (EdTech), creating tools that train today's citizens and tomorrow's technological leaders.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "innovation": "Continuous Innovation",
+      "innovationDesc": "Pushing technological boundaries with AI and interactive animation.",
+      "impact": "Social Impact",
+      "impactDesc": "Every line of code written aims to improve education on the continent.",
+      "identity": "African Identity",
+      "identityDesc": "Promoting our heritage and narratives in a modern and inspiring way.",
+      "excellence": "Professional Excellence",
+      "excellenceDesc": "Providing international quality standards to inspire trust."
+    }
+  },
+  "impact": {
+    "title": "Our Impact in Numbers",
+    "subtitle": "Real data, continuous commitment to positive change.",
+    "stats": {
+      "kids": "Children Reached",
+      "schools": "Partner Institutions",
+      "projects": "Active Projects",
+      "partners": "Institutional Partners"
+    }
+  },
+  "domains": {
+    "title": "Our Domains of Expertise",
+    "subtitle": "A full spectrum of skills to power digital education.",
+    "list": {
+      "ai": "Artificial Intelligence",
+      "aiDesc": "Integration of smart educational assistants and adaptive learning engines.",
+      "animation": "Animation & 3D",
+      "animationDesc": "Production of animated series and captivating storytelling to educate youth.",
+      "training": "Training & E-learning",
+      "trainingDesc": "Design of professional and continuous training portals for teachers and instructors.",
+      "apps": "Mobile Applications",
+      "appsDesc": "Development of interactive offline-ready learning tools for Android and iOS.",
+      "cyber": "Cybersecurity",
+      "cyberDesc": "Raising awareness and practical training on digital risks and digital patriotism.",
+      "production": "Audiovisual Production",
+      "productionDesc": "Creation of educational documentaries and high-quality multimedia content."
+    }
+  },
+  "chatbot": {
+    "title": "Le Gardien - AI Assistant",
+    "tagline": "Education & Cybersecurity",
+    "welcome": "Hello! I am Le Gardien. I can help you understand cybersecurity, give you tips for safe web browsing, or guide you to our training kits. Ask me anything!",
+    "placeholder": "Ask me: 'How do I protect my password?' or 'What is phishing?'",
+    "send": "Send",
+    "reset": "Reset"
+  },
+  "gardiens": {
+    "title": "Les Gardiens du Quartier",
+    "tagline": "The first African animation project dedicated to cybersecurity",
+    "intro": "Ahmad, Sarah, Ily, Yusuf, and Junior discover the dangers of the digital world in their neighborhood. Guided by Inspectrice Fatima, they become protectors of their community by learning to recognize risks, verify information, and act with courage.",
+    "cta": "Become a Partner",
+    "s1": "Season 1: Discovering the dangers (deceptive messages, rumors, online risks)",
+    "s2": "Season 2: Understanding the digital world (algorithms, fake news, self-protection)",
+    "s3": "Season 3: Becoming a role model (educating, protecting, and guiding others)",
+    "timelineTitle": "The Odyssey of the Guardians",
+    "timelineSubtitle": "Three thematic seasons designed to educate step-by-step.",
+    "characters": "Meet the Guardians",
+    "kits": "Educational Kits & Media",
+    "kitsSubtitle": "Download our materials to run lessons and workshops."
+  },
+  "partners": {
+    "title": "Institutional Partners",
+    "status": "Institutional partnerships currently under development"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Send us a message to collaborate or learn more about our solutions.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "An error occurred during sending."
+    },
+    "details": {
+      "title": "Our Contact Details",
+      "email": "contact@africaimpact.studio",
+      "phone": "+237 600 000 000 / +237 200 000 000",
+      "address": "Bastos Neighborhood, Yaounde, Cameroon"
+    }
+  }
+}

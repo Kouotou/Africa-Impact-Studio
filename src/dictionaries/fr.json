@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "Qui Sommes-Nous",
+    "projects": "Nos Projets",
+    "blog": "Blog",
+    "resources": "Ressources",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "hero": {
+    "slogan": "L'innovation au service de la formation en Afrique",
+    "subtitle": "Nous construisons le futur de l'éducation africaine grâce aux technologies numériques, à l'animation interactive et à l'intelligence artificielle.",
+    "ctaProjects": "Découvrir nos projets",
+    "ctaContact": "Nous contacter",
+    "highlightBadge": "Projet Phare : Les Gardiens du Quartier"
+  },
+  "about": {
+    "title": "Qui Sommes-Nous ?",
+    "storyTitle": "Notre Histoire",
+    "story": "Fondé avec la conviction profonde que la technologie peut combler les fossés éducatifs en Afrique, Africa Impact Studio allie excellence technique et engagement social. Nous croyons que la jeunesse africaine mérite des contenus éducatifs de classe mondiale, ancrés dans ses réalités culturelles.",
+    "missionTitle": "Notre Mission",
+    "mission": "Transformer durablement la manière dont les Africains apprennent, se forment et développent leurs compétences grâce à l'animation 3D, la cybersécurité et l'intelligence artificielle.",
+    "visionTitle": "Notre Vision",
+    "vision": "Devenir la référence continentale en technologies éducatives (EdTech), en créant des outils qui forment aujourd'hui les citoyens et les leaders technologiques de demain.",
+    "valuesTitle": "Nos Valeurs",
+    "values": {
+      "innovation": "Innovation Continue",
+      "innovationDesc": "Repousser les limites technologiques avec l'IA et l'animation interactive.",
+      "impact": "Impact Social",
+      "impactDesc": "Chaque ligne de code écrite vise à améliorer l'éducation sur le continent.",
+      "identity": "Identité Africaine",
+      "identityDesc": "Promouvoir notre héritage et nos récits de manière moderne et inspirante.",
+      "excellence": "Excellence Professionnelle",
+      "excellenceDesc": "Fournir des standards de qualité internationaux pour inspirer confiance."
+    }
+  },
+  "impact": {
+    "title": "Notre Impact en Chiffres",
+    "subtitle": "Des données réelles, un engagement continu pour le changement.",
+    "stats": {
+      "kids": "Enfants sensibilisés",
+      "schools": "Établissements partenaires",
+      "projects": "Projets actifs",
+      "partners": "Partenaires institutionnels"
+    }
+  },
+  "domains": {
+    "title": "Nos Domaines d'Expertise",
+    "subtitle": "Un spectre complet de compétences pour propulser l'éducation numérique.",
+    "list": {
+      "ai": "Intelligence Artificielle",
+      "aiDesc": "Intégration d'assistants éducatifs intelligents et de systèmes d'apprentissage adaptatifs.",
+      "animation": "Animation & 3D",
+      "animationDesc": "Production de séries animées et de récits captivants pour éduquer la jeunesse.",
+      "training": "Formation & E-learning",
+      "trainingDesc": "Conception de portails de formation professionnelle et continue pour enseignants et formateurs.",
+      "apps": "Applications Mobiles",
+      "appsDesc": "Développement d'outils d'apprentissage interactifs accessibles hors-ligne pour Android et iOS.",
+      "cyber": "Cybersécurité",
+      "cyberDesc": "Sensibilisation et formation pratique aux risques numériques et au patriotisme numérique.",
+      "production": "Production Audiovisuelle",
+      "productionDesc": "Réalisation de documentaires pédagogiques et de contenus multimédias d'excellence."
+    }
+  },
+  "chatbot": {
+    "title": "Le Gardien - Assistant IA",
+    "tagline": "Éducation & Cybersécurité",
+    "welcome": "Bonjour ! Je suis Le Gardien. Je peux t'aider à comprendre la cybersécurité, te donner des conseils pour naviguer sur le web en toute sécurité, ou t'orienter vers nos kits de formation. Pose-moi tes questions !",
+    "placeholder": "Demande-moi : 'Comment protéger mon mot de passe ?' ou 'C'est quoi le phishing ?'",
+    "send": "Envoyer",
+    "reset": "Réinitialiser"
+  },
+  "gardiens": {
+    "title": "Les Gardiens du Quartier",
+    "tagline": "Le premier projet africain d'animation dédié à la securité numérique et à l'éducation civique.",
+    "intro": "Ahmad, Sarah, Ily, Yusuf et Junior découvrent les dangers du numérique dans leur quartier. Guidés par l'Inspectrice Fatima, ils deviennent les protecteurs de leur communauté en apprenant à reconnaître les risques, à vérifier l'information et à agir avec courage.",
+    "cta": "Devenir Partenaire",
+    "s1": "Saison 1 : Découvrir les dangers (messages trompeurs, rumeurs, risques en ligne)",
+    "s2": "Saison 2 : Comprendre le monde numérique (algorithmes, fake news, protection de soi)",
+    "s3": "Saison 3 : Devenir un modèle (éduquer, protéger et accompagner les autres)",
+    "timelineTitle": "L'Odyssée des Gardiens",
+    "timelineSubtitle": "Trois saisons thématiques conçues pour éduquer pas à pas.",
+    "characters": "Faites connaissance avec les Gardiens",
+    "kits": "Kits Pédagogiques & Médias",
+    "kitsSubtitle": "Téléchargez nos supports pour animer vos cours et ateliers."
+  },
+  "partners": {
+    "title": "Partenaires Institutionnels",
+    "status": "Partenariats institutionnels en cours de développement"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Envoyez-nous un message pour collaborer ou en savoir plus sur nos solutions.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur est survenue lors de l'envoi."
+    },
+    "details": {
+      "title": "Nos Coordonnées",
+      "email": "africaimpactstudio@gmail.com",
+      "phone": "+237 656 850 899 / +237 679 263 063",
+      "address": "Checkpoint, Buea, Cameroun"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// prisma/schema.prisma
+
+// For PostgreSQL, change the provider to "postgresql" and URL to env("DATABASE_URL")
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String     @id @default(uuid())
+  email        String     @unique
+  name         String
+  passwordHash String
+  role         String     @default("EDITOR") // ADMIN, EDITOR, USER
+  createdAt    DateTime   @default(now())
+  posts        BlogPost[]
+}
+
+model BlogPost {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  category    String   // Cybersecurity, AI, Education, etc.
+  excerpt     String
+  content     String   // Markdown or rich text
+  coverImage  String
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  tagline     String
+  description String
+  coverImage  String
+  images      String   // Comma-separated or JSON list of images
+  category    String   // AI, Animation, Training, Cybersecurity, etc.
+  status      String   // Active, In Development, Future
+  isFlagship  Boolean  @default(false)
+  websiteUrl  String?
+  githubUrl   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Partner {
+  id         String   @id @default(uuid())
+  name       String
+  logoUrl    String
+  websiteUrl String?
+  status     String   @default("IN_DEVELOPMENT") // ACTIVE, PENDING, IN_DEVELOPMENT
+  createdAt  DateTime @default(now())
+}
+
+model Download {
+  id            String   @id @default(uuid())
+  name          String
+  description   String
+  fileUrl       String
+  fileSize      String   // e.g. "1.2 MB"
+  downloadCount Int      @default(0)
+  createdAt     DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

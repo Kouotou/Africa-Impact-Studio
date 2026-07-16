@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terracotta: #D35400;
+  --color-terracotta-light: #E67E22;
+  --color-terracotta-dark: #A04000;
+  
+  --color-deep-green: #0B3C2B;
+  --color-deep-green-light: #165B44;
+  --color-deep-green-dark: #052217;
+
+  --color-gold: #D4AF37;
+  --color-gold-light: #F1C40F;
+  --color-gold-dark: #9A7D0A;
+
+  --color-off-white: #FAFAF7;
+  --color-charcoal: #121212;
+  --color-charcoal-light: #1E1E1E;
+  
+  --font-sans: var(--font-jakarta), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
+}
+
+:root {
+  --background: #FAFAF7;
+  --foreground: #121212;
+  --color-border: rgba(11, 60, 43, 0.1);
+}
+
+/* Custom theme overrides when class dark is present */
+.dark {
+  --background: #121212;
+  --foreground: #FAFAF7;
+  --color-border: rgba(250, 250, 247, 0.08);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 700;
+}
+
+/* Glassmorphism Styles */
+.glass {
+  background: rgba(250, 250, 247, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(11, 60, 43, 0.08);
+}
+
+.dark .glass {
+  background: rgba(25, 25, 25, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(250, 250, 247, 0.05);
+}
+
+/* Premium Gradients */
+.bg-gradient-terracotta-gold {
+  background: linear-gradient(135deg, #D35400 0%, #D4AF37 100%);
+}
+
+.bg-gradient-green-dark {
+  background: linear-gradient(135deg, #0B3C2B 0%, #052217 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F1C40F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-terracotta {
+  background: linear-gradient(135deg, #D35400 0%, #E67E22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* African Geometric Pattern Background SVG */
+.bg-pattern-geo {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 48L30 24L6 48h48zM30 6l24 24H6L30 6z' fill='%230b3c2b' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.dark .bg-pattern-geo {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 48L30 24L6 48h48zM30 6l24 24H6L30 6z' fill='%23fafaf7' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Custom Micro-animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Dynamic glow effect cards */
+.glow-card {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glow-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  box-shadow: 0 0 20px 2px rgba(211, 84, 0, 0.2);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glow-card:hover::after {
+  opacity: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #D35400;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B34400;
+}
