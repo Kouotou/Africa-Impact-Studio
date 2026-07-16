@@ -28,7 +28,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Ahmad is a lively child who asks the right questions and wants to understand what happens behind screens. He learns to spot digital dangers with courage and determination.",
       skill: lang === 'fr' ? 'Observation, Curiosité, Esprit d\'initiative' : 'Observation, Curiosity, Initiative',
       color: 'border-terracotta text-terracotta',
-      avatar: '/assets/main-characters/Ahmad.jpg',
+      avatar: '/main-characters/Ahmad.jpg',
     },
     {
       name: 'Sarah',
@@ -39,7 +39,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Sarah is attentive, thoughtful, and deeply attached to the truth. She helps the group decode warning signs, verify information, and protect their digital lives.",
       skill: lang === 'fr' ? 'Analyse, Vérification, Sens critique' : 'Analysis, Verification, Critical Thinking',
       color: 'border-deep-green text-deep-green',
-      avatar: '/assets/main-characters/Sarah.jpg',
+      avatar: '/main-characters/Sarah.jpg',
     },
     {
       name: 'Ily',
@@ -50,7 +50,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Ily is the calm center of the group. He listens, observes, and builds clear answers to the mysteries of the web, especially when security and privacy are involved.",
       skill: lang === 'fr' ? 'Patience, Organisation, Sens de la logique' : 'Patience, Organization, Logic',
       color: 'border-gold text-gold',
-      avatar: '/assets/main-characters/Ily.jpg',
+      avatar: '/main-characters/Ily.jpg',
     },
     {
       name: 'Yusuf',
@@ -61,7 +61,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Yusuf likes to learn quickly and share what he discovers. His energy and curiosity help him connect neighborhood experiences to digital issues.",
       skill: lang === 'fr' ? 'Communication, Échange, Sens pratique' : 'Communication, Exchange, Practical Sense',
       color: 'border-terracotta text-terracotta',
-      avatar: '/assets/main-characters/Yusuf.jpg',
+      avatar: '/main-characters/Yusuf.jpg',
     },
     {
       name: 'Junior',
@@ -72,7 +72,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Junior brings a fresh perspective to the world. He asks many questions, invents simple solutions, and reminds everyone that learning can stay joyful.",
       skill: lang === 'fr' ? 'Créativité, Questionnement, Imagination' : 'Creativity, Questioning, Imagination',
       color: 'border-deep-green text-deep-green',
-      avatar: '/assets/main-characters/Junior.jpg',
+      avatar: '/main-characters/Junior.jpg',
     },
     {
       name: 'Inspectrice-Fatima',
@@ -83,7 +83,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Inspectrice-Fatima guides the group with calm authority. She shares values of protection, responsibility, and trust in service of the neighborhood.",
       skill: lang === 'fr' ? 'Conseil, Encadrement, Sécurité' : 'Guidance, Mentorship, Safety',
       color: 'border-gold text-gold',
-      avatar: '/assets/main-characters/Inspectrice-Fatima.jpg',
+      avatar: '/main-characters/Inspectrice-Fatima.jpg',
     }
   ];
 
