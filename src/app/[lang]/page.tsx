@@ -198,7 +198,7 @@ export default async function HomePage({ params }: PageProps) {
                   { name: 'Ily', label: lang === 'fr' ? 'Calme / Logique' : 'Calm / Logic' },
                   { name: 'Yusuf', label: lang === 'fr' ? 'Énergie / Quartier' : 'Energy / Neighborhood' },
                   { name: 'Junior', label: lang === 'fr' ? 'Créativité / Questions' : 'Creativity / Questions' },
-                  { name: 'Inspectrice Fatima', label: lang === 'fr' ? 'Guidage / Sécurité' : 'Guidance / Safety' }
+                  { name: 'Inspectrice-Fatima', label: lang === 'fr' ? 'Guidage / Sécurité' : 'Guidance / Safety' }
                 ].map((person) => (
                   <div key={person.name} className="p-3 rounded-xl border border-[var(--color-border)] bg-white/50 dark:bg-charcoal/50 text-center">
                     <h4 className="font-bold text-xs text-terracotta dark:text-gold mb-0.5">{person.name}</h4>

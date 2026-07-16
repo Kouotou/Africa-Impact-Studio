@@ -28,7 +28,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Ahmad is a lively child who asks the right questions and wants to understand what happens behind screens. He learns to spot digital dangers with courage and determination.",
       skill: lang === 'fr' ? 'Observation, Curiosité, Esprit d\'initiative' : 'Observation, Curiosity, Initiative',
       color: 'border-terracotta text-terracotta',
-      avatar: '/main-characters/Ahmad.jpg',
+      avatar: '/assets/projects/main-characters/Ahmad.jpg',
     },
     {
       name: 'Sarah',
@@ -39,7 +39,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Sarah is attentive, thoughtful, and deeply attached to the truth. She helps the group decode warning signs, verify information, and protect their digital lives.",
       skill: lang === 'fr' ? 'Analyse, Vérification, Sens critique' : 'Analysis, Verification, Critical Thinking',
       color: 'border-deep-green text-deep-green',
-      avatar: '/main-characters/Sarah.jpg',
+      avatar: '/assets/projects/main-characters/Sarah.jpg',
     },
     {
       name: 'Ily',
@@ -50,7 +50,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Ily is the calm center of the group. He listens, observes, and builds clear answers to the mysteries of the web, especially when security and privacy are involved.",
       skill: lang === 'fr' ? 'Patience, Organisation, Sens de la logique' : 'Patience, Organization, Logic',
       color: 'border-gold text-gold',
-      avatar: '/main-characters/Ily.jpg',
+      avatar: '/assets/projects/main-characters/Ily.jpg',
     },
     {
       name: 'Yusuf',
@@ -61,7 +61,7 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Yusuf likes to learn quickly and share what he discovers. His energy and curiosity help him connect neighborhood experiences to digital issues.",
       skill: lang === 'fr' ? 'Communication, Échange, Sens pratique' : 'Communication, Exchange, Practical Sense',
       color: 'border-terracotta text-terracotta',
-      avatar: '/main-characters/Yusuf.jpg',
+      avatar: '/assets/projects/main-characters/Yusuf.jpg',
     },
     {
       name: 'Junior',
@@ -72,18 +72,18 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         : "Junior brings a fresh perspective to the world. He asks many questions, invents simple solutions, and reminds everyone that learning can stay joyful.",
       skill: lang === 'fr' ? 'Créativité, Questionnement, Imagination' : 'Creativity, Questioning, Imagination',
       color: 'border-deep-green text-deep-green',
-      avatar: '/main-characters/Junior.jpg',
+      avatar: '/assets/projects/main-characters/Junior.jpg',
     },
     {
-      name: 'Inspectrice Fatima',
+      name: 'Inspectrice-Fatima',
       age: '35 ' + (lang === 'fr' ? 'ans' : 'y/o'),
       role: lang === 'fr' ? 'Mentor / Gardienne de la sécurité' : 'Mentor / Guardian of safety',
       desc: lang === 'fr'
-        ? "L'Inspectrice Fatima guide le groupe avec calme et autorité. Elle transmet les valeurs de protection, de responsabilité et de confiance au service du quartier."
-        : "Inspectrice Fatima guides the group with calm authority. She shares values of protection, responsibility, and trust in service of the neighborhood.",
+        ? "L'Inspectrice-Fatima guide le groupe avec calme et autorité. Elle transmet les valeurs de protection, de responsabilité et de confiance au service du quartier."
+        : "Inspectrice-Fatima guides the group with calm authority. She shares values of protection, responsibility, and trust in service of the neighborhood.",
       skill: lang === 'fr' ? 'Conseil, Encadrement, Sécurité' : 'Guidance, Mentorship, Safety',
       color: 'border-gold text-gold',
-      avatar: '/main-characters/Inpectrice Famille.jpg',
+      avatar: '/assets/projects/main-characters/Inspectrice-Fatima.jpg',
     }
   ];
 
@@ -93,8 +93,8 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
       title: lang === 'fr' ? 'Saison 1 : Découvrir les dangers' : 'Season 1: Discovering the dangers',
       focus: lang === 'fr' ? 'Identifier les risques du numérique' : 'Identifying digital risks',
       desc: lang === 'fr'
-        ? "Ahmad, Sarah, Ily, Yusuf et Junior découvrent que le quartier est traversé par des messages trompeurs, des rumeurs en ligne et des situations dangereuses. Sous l'encadrement de l'Inspectrice Fatima, ils apprennent à se protéger."
-        : "Ahmad, Sarah, Ily, Yusuf, and Junior discover that the neighborhood is being crossed by deceptive messages, online rumors, and dangerous situations. With the guidance of Inspectrice Fatima, they learn how to protect themselves."
+        ? "Ahmad, Sarah, Ily, Yusuf et Junior découvrent que le quartier est traversé par des messages trompeurs, des rumeurs en ligne et des situations dangereuses. Sous l'encadrement de l'Inspectrice-Fatima, ils apprennent à se protéger."
+        : "Ahmad, Sarah, Ily, Yusuf, and Junior discover that the neighborhood is being crossed by deceptive messages, online rumors, and dangerous situations. With the guidance of Inspectrice-Fatima, they learn how to protect themselves."
     },
     {
       number: '02',
@@ -247,12 +247,19 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
                 className="rounded-2xl overflow-hidden glass border border-[var(--color-border)] flex flex-col glow-card h-full"
               >
                 <div className="aspect-[4/3] relative w-full bg-deep-green/10">
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-green/40 to-transparent" />
-                  {/* Subtle character badge */}
-                  <div className="absolute bottom-4 left-4 px-2.5 py-1 rounded-md bg-white text-deep-green text-[10px] font-bold uppercase tracking-wider shadow">
-                    {char.age}
-                  </div>
+                {/* AJOUT DE LA BALISE IMAGE ICI */}
+                  <img
+                    src={char.avatar}
+                    alt={char.name}
+                    className="object-cover w-full h-full"
+                  />
+  
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-green/40 to-transparent" />
+                {/* Subtle character badge */}
+                <div className="absolute bottom-4 left-4 px-2.5 py-1 rounded-md bg-white text-deep-green text-[10px] font-bold uppercase tracking-wider shadow">
+                  {char.age}
                 </div>
+              </div>
                 <div className="p-5 flex flex-col flex-grow justify-between gap-4">
                   <div>
                     <h3 className="font-display font-extrabold text-lg text-deep-green dark:text-off-white">

@@ -39,8 +39,8 @@ const knowledgeBase: KnowledgeEntry[] = [
   {
     keywords: ['gardiens', 'quartier', 'project', 'startup', 'ahmad', 'sarah', 'ily', 'yusuf', 'junior', 'fatima', 'inspectrice', 'serie', 'anime'],
     answers: {
-      fr: 'Les Gardiens du Quartier est notre projet de sensibilisation numérique pour les enfants et les jeunes. Il met en scène Ahmad, Sarah, Ily, Yusuf, Junior et l’Inspectrice Fatima pour apprendre la cybersécurité, la citoyenneté numérique et la confiance en soi.',
-      en: 'Les Gardiens du Quartier is our digital education project for children and young people. It features Ahmad, Sarah, Ily, Yusuf, Junior, and Inspectrice Fatima as they learn cybersecurity, digital citizenship, and confidence.'
+      fr: 'Les Gardiens du Quartier est notre projet de sensibilisation numérique pour les enfants et les jeunes. Il met en scène Ahmad, Sarah, Ily, Yusuf, Junior et l’Inspectrice-Fatima pour apprendre la cybersécurité, la citoyenneté numérique et la confiance en soi.',
+      en: 'Les Gardiens du Quartier is our digital education project for children and young people. It features Ahmad, Sarah, Ily, Yusuf, Junior, and Inspectrice-Fatima as they learn cybersecurity, digital citizenship, and confidence.'
     }
   },
   {
