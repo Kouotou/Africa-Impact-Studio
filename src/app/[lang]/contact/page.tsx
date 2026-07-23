@@ -2,9 +2,14 @@
 'use client';
 
 import React, { useState, use } from 'react';
+import emailjs from '@emailjs/browser';
 import { getDictionary } from '@/lib/get-dictionary';
 import { GridPattern, OrganicBlob } from '@/components/brand/PatternBackground';
-import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle2, Navigation } from 'lucide-react';
+
+const CONTACT_ADDRESS_QUERY = 'Checkpoint, Buea, Cameroon';
+const GOOGLE_MAPS_EMBED_SRC = `https://www.google.com/maps?q=${encodeURIComponent(CONTACT_ADDRESS_QUERY)}&output=embed`;
+const GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_ADDRESS_QUERY)}`;
 
 interface ContactPageProps {
   params: Promise<{ lang: string }>;
@@ -24,7 +29,7 @@ export default function ContactPage({ params }: ContactPageProps) {
 
   if (!dict) return <div className="min-h-screen flex items-center justify-center font-bold">Loading...</div>;
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
 
@@ -35,12 +40,52 @@ export default function ContactPage({ params }: ContactPageProps) {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
+      if (!response.ok) {
         setStatus('error');
+        return;
       }
+
+      setStatus('success');
+
+      // Fire-and-forget: notify the team + send the sender a personalized auto-reply.
+      // Message is already saved in the database above, so an email hiccup here
+      // must not flip the UI back to an error state.
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const notifyTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_NOTIFY;
+      const autoReplyTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_AUTOREPLY;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (serviceId && notifyTemplateId && autoReplyTemplateId && publicKey) {
+        const options = { publicKey };
+        Promise.all([
+          emailjs.send(
+            serviceId,
+            notifyTemplateId,
+            {
+              from_name: formData.name,
+              from_email: formData.email,
+              subject: formData.subject,
+              message: formData.message,
+              to_email: 'africaimpactstudio@gmail.com',
+            },
+            options
+          ),
+          emailjs.send(
+            serviceId,
+            autoReplyTemplateId,
+            {
+              to_name: formData.name,
+              to_email: formData.email,
+              subject: formData.subject,
+            },
+            options
+          ),
+        ]).catch((err) => console.error('EmailJS send failed:', err));
+      } else {
+        console.warn('EmailJS env vars are not configured; skipping email notifications.');
+      }
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       setStatus('error');
     }
@@ -79,7 +124,7 @@ export default function ContactPage({ params }: ContactPageProps) {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-terracotta mt-0.5 shrink-0" />
                   <div>
-                    <h4 className="font-bold text-deep-green dark:text-off-white mb-0.5">Yaoundé, Cameroun</h4>
+                    <h4 className="font-bold text-deep-green dark:text-off-white mb-0.5">{dict.contact.details.office}</h4>
                     <p className="opacity-75">{dict.contact.details.address}</p>
                   </div>
                 </div>
@@ -102,24 +147,27 @@ export default function ContactPage({ params }: ContactPageProps) {
               </div>
             </div>
 
-            {/* Interactive Custom CSS High-tech Map Visualizer */}
+            {/* Real Google Maps embed pinned on the office location */}
             <div className="relative h-[250px] rounded-3xl overflow-hidden border border-[var(--color-border)] shadow-2xl bg-deep-green/20">
-              {/* Map grid lines background */}
-              <div className="absolute inset-0 bg-pattern-geo opacity-40"></div>
-              {/* Radar rings mapping Yaoundé office */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full border-2 border-terracotta/25 animate-ping"></div>
-                <div className="absolute w-12 h-12 rounded-full border-2 border-terracotta/40 animate-pulse"></div>
-                <div className="absolute w-4 h-4 rounded-full bg-gradient-terracotta-gold shadow-lg flex items-center justify-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
-                </div>
-              </div>
-              <div className="absolute top-4 left-4 glass px-3 py-1.5 rounded-lg text-[9px] uppercase tracking-wider font-extrabold">
+              <iframe
+                src={GOOGLE_MAPS_EMBED_SRC}
+                title="Africa Impact Studio location"
+                loading="lazy"
+                style={{ border: 0 }}
+                className="w-full h-full grayscale-[15%] contrast-[1.05]"
+              />
+              <div className="absolute top-4 left-4 glass px-3 py-1.5 rounded-lg text-[9px] uppercase tracking-wider font-extrabold pointer-events-none">
                 📍 Africa Impact Studio HQ
               </div>
-              <div className="absolute bottom-4 right-4 glass px-3 py-1.5 rounded-lg text-[9px] uppercase tracking-wider font-extrabold">
-                Bastos, Yaoundé
-              </div>
+              <a
+                href={GOOGLE_MAPS_DIRECTIONS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 glass px-3 py-1.5 rounded-lg text-[9px] uppercase tracking-wider font-extrabold flex items-center gap-1.5 hover:bg-terracotta hover:text-white transition-colors cursor-pointer"
+              >
+                <Navigation className="w-3 h-3" />
+                {lang === 'fr' ? 'Itinéraire' : 'Get Directions'}
+              </a>
             </div>
           </div>
 
@@ -177,9 +225,12 @@ export default function ContactPage({ params }: ContactPageProps) {
                 </div>
 
                 {status === 'success' && (
-                  <div className="p-3.5 rounded-xl border border-green-500/25 bg-green-500/10 flex items-center gap-2.5 text-xs text-green-600 dark:text-green-400 font-semibold">
-                    <CheckCircle2 className="w-5 h-5 shrink-0" />
-                    <span>{dict.contact.form.success}</span>
+                  <div className="p-3.5 rounded-xl border border-green-500/25 bg-green-500/10 flex items-start gap-2.5 text-xs text-green-600 dark:text-green-400 font-semibold">
+                    <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                    <div className="flex flex-col gap-0.5">
+                      <span>{dict.contact.form.success}</span>
+                      <span className="opacity-80 font-medium">{dict.contact.form.successDetail}</span>
+                    </div>
                   </div>
                 )}
 

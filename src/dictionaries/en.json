@@ -99,13 +99,15 @@
       "message": "Message",
       "submit": "Send Message",
       "success": "Message sent successfully!",
+      "successDetail": "You'll receive a personalized reply within 3-5 working days.",
       "error": "An error occurred during sending."
     },
     "details": {
       "title": "Our Contact Details",
-      "email": "contact@africaimpact.studio",
-      "phone": "+237 600 000 000 / +237 200 000 000",
-      "address": "Bastos Neighborhood, Yaounde, Cameroon"
+      "office": "Our Office",
+      "email": "africaimpactstudio@gmail.com",
+      "phone": "+237 656 850 899 / +237 679 263 063",
+      "address": "Checkpoint, Buea, Cameroon"
     }
   }
 }

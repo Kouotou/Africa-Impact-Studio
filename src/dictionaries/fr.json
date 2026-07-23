@@ -99,10 +99,12 @@
       "message": "Message",
       "submit": "Envoyer le message",
       "success": "Message envoyé avec succès !",
+      "successDetail": "Vous recevrez une réponse personnalisée sous 3 à 5 jours ouvrés.",
       "error": "Une erreur est survenue lors de l'envoi."
     },
     "details": {
       "title": "Nos Coordonnées",
+      "office": "Notre Bureau",
       "email": "africaimpactstudio@gmail.com",
       "phone": "+237 656 850 899 / +237 679 263 063",
       "address": "Checkpoint, Buea, Cameroun"
