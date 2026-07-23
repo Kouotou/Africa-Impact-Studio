@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { getDictionary } from '@/lib/get-dictionary';
 import { prisma } from '@/lib/db';
 import { GridPattern, OrganicBlob, GeometricDivider, AfricanBorderPattern } from '@/components/brand/PatternBackground';
-import { Shield, Sparkles, Download, ArrowRight, Play, BookOpen, Compass, Heart, HelpCircle } from 'lucide-react';
+import { Shield, Sparkles, Download, ArrowRight, BookOpen, Compass, Heart, HelpCircle } from 'lucide-react';
+import YoutubeTrailer from '@/components/ui/YoutubeTrailer';
 
 interface ProjectPageProps {
   params: Promise<{ lang: string }>;
@@ -165,21 +166,14 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
         </div>
       </section>
 
-      {/* TRAILER MOCKUP */}
+      {/* TRAILER */}
       <section className="max-w-6xl mx-auto px-6 mb-24">
         <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-[var(--color-border)] group">
-          <img
-            src="/assets/projects/gardiens-characters.jpg"
-            alt="Les Gardiens du Quartier banner"
-            className="object-cover w-full h-full"
+          <YoutubeTrailer
+            videoId="ItNwLMkcThk"
+            title="Les Gardiens du Quartier - Trailer"
+            className="absolute inset-0 w-full h-full"
           />
-          <div className="absolute inset-0 bg-deep-green/30 mix-blend-overlay"></div>
-          {/* Custom animated play button overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <button className="w-20 h-20 rounded-full bg-gradient-terracotta-gold text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 cursor-pointer">
-              <Play className="w-8 h-8 fill-current text-white ml-1.5 animate-pulse" />
-            </button>
-          </div>
         </div>
       </section>
 

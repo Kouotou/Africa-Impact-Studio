@@ -6,6 +6,7 @@ import { prisma } from '@/lib/db';
 import { GridPattern, OrganicBlob, GeometricDivider, AfricanBorderPattern } from '@/components/brand/PatternBackground';
 import StatCounter from '@/components/ui/StatCounter';
 import TabSection from '@/components/ui/TabSection';
+import YoutubeTrailer from '@/components/ui/YoutubeTrailer';
 import { ShieldCheck, Play, ArrowRight, BookOpen, Film, Layers, Monitor, Shield, Award } from 'lucide-react';
 
 interface PageProps {
@@ -163,28 +164,25 @@ export default async function HomePage({ params }: PageProps) {
             <div className="lg:col-span-6 relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-[var(--color-border)] group">
               
               {/* AUTOPLAYING YOUTUBE TRAILER (replaces local video file) */}
-              <iframe
-                src="https://www.youtube.com/embed/ItNwLMkcThk?autoplay=1&mute=1&loop=1&playlist=ItNwLMkcThk&controls=0&modestbranding=1&rel=0&playsinline=1"
+              <YoutubeTrailer
+                videoId="ItNwLMkcThk"
                 title="Les Gardiens du Quartier - Trailer"
-                allow="autoplay; encrypted-media; picture-in-picture"
-                allowFullScreen
-                style={{ border: 0 }}
-                className="w-full h-full pointer-events-none group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full"
               />
 
-              <div className="absolute inset-0 bg-deep-green/30 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-deep-green/30 mix-blend-overlay pointer-events-none"></div>
 
               {/* Circular play button overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <Link
                   href={`/${lang}/projects/les-gardiens-du-quartier`}
-                  className="w-16 h-16 rounded-full bg-gradient-terracotta-gold text-white flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300 cursor-pointer"
+                  className="w-16 h-16 rounded-full bg-gradient-terracotta-gold text-white flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300 cursor-pointer pointer-events-auto"
                 >
                   <Play className="w-6 h-6 fill-current text-white ml-1" />
                 </Link>
               </div>
 
-              <div className="absolute bottom-4 left-4 p-3 glass rounded-xl text-xs font-semibold">
+              <div className="absolute bottom-4 left-4 p-3 glass rounded-xl text-xs font-semibold pointer-events-none">
                 🎬 {lang === 'fr' ? 'Voir le Trailer Littéraire' : 'View Literary Trailer'}
               </div>
             </div>
