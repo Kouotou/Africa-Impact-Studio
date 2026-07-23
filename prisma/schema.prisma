@@ -1,9 +1,8 @@
 // prisma/schema.prisma
 
-// For PostgreSQL, change the provider to "postgresql" and URL to env("DATABASE_URL")
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 generator client {

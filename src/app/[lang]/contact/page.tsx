@@ -7,9 +7,10 @@ import { getDictionary } from '@/lib/get-dictionary';
 import { GridPattern, OrganicBlob } from '@/components/brand/PatternBackground';
 import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle2, Navigation } from 'lucide-react';
 
-const CONTACT_ADDRESS_QUERY = 'Checkpoint, Buea, Cameroon';
-const GOOGLE_MAPS_EMBED_SRC = `https://www.google.com/maps?q=${encodeURIComponent(CONTACT_ADDRESS_QUERY)}&output=embed`;
-const GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_ADDRESS_QUERY)}`;
+// Stade Omnisport de Molyko, Buea — GPS 4.160780, 9.279899
+const GOOGLE_MAPS_EMBED_SRC =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.303498626721!2d9.277280874471694!3d4.16061424610391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061331779863a2d%3A0xf4750cae457b7f27!2sStade%20Omnisport%20de%20Molyko!5e0!3m2!1sfr!2scm!4v1784834949089!5m2!1sfr!2scm';
+const GOOGLE_MAPS_DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=4.160780,9.279899';
 
 interface ContactPageProps {
   params: Promise<{ lang: string }>;
@@ -153,6 +154,8 @@ export default function ContactPage({ params }: ContactPageProps) {
                 src={GOOGLE_MAPS_EMBED_SRC}
                 title="Africa Impact Studio location"
                 loading="lazy"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
                 style={{ border: 0 }}
                 className="w-full h-full grayscale-[15%] contrast-[1.05]"
               />
