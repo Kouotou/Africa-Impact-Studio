@@ -46,8 +46,8 @@ export default async function GardiensProjectPage({ params }: ProjectPageProps) 
       age: '13 ' + (lang === 'fr' ? 'ans' : 'y/o'),
       role: lang === 'fr' ? 'Calme / Méthodique' : 'Calm / Methodical',
       desc: lang === 'fr'
-        ? "Ily est le cœur tranquille du groupe. Il écoute, observe et construit des réponses claires face aux mystères du web, surtout quand il s'agit de sécurité et de confidentialité."
-        : "Ily is the calm center of the group. He listens, observes, and builds clear answers to the mysteries of the web, especially when security and privacy are involved.",
+        ? "Ily est le cœur tranquille du groupe. Elle écoute, observe et construit des réponses claires face aux mystères du web, surtout quand il s'agit de sécurité et de confidentialité."
+        : "Ily is the calm center of the group. She listens, observes, and builds clear answers to the mysteries of the web, especially when security and privacy are involved.",
       skill: lang === 'fr' ? 'Patience, Organisation, Sens de la logique' : 'Patience, Organization, Logic',
       color: 'border-gold text-gold',
       avatar: '/main-characters/Ily.jpg',

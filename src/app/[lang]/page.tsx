@@ -158,15 +158,22 @@ export default async function HomePage({ params }: PageProps) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Immersive Trailer Mock */}
             <div className="lg:col-span-6 relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-[var(--color-border)] group">
-              <img
-                src="/assets/projects/gardiens-characters.jpg"
-                alt="Les Gardiens du Quartier Trailer Thumbnail"
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
+              
+              {/* AUTOPLAYING YOUTUBE TRAILER (replaces local video file) */}
+              <iframe
+                src="https://www.youtube.com/embed/ItNwLMkcThk?autoplay=1&mute=1&loop=1&playlist=ItNwLMkcThk&controls=0&modestbranding=1&rel=0&playsinline=1"
+                title="Les Gardiens du Quartier - Trailer"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+                style={{ border: 0 }}
+                className="w-full h-full pointer-events-none group-hover:scale-105 transition-transform duration-700"
               />
+
               <div className="absolute inset-0 bg-deep-green/30 mix-blend-overlay"></div>
+
               {/* Circular play button overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <Link
@@ -176,6 +183,7 @@ export default async function HomePage({ params }: PageProps) {
                   <Play className="w-6 h-6 fill-current text-white ml-1" />
                 </Link>
               </div>
+
               <div className="absolute bottom-4 left-4 p-3 glass rounded-xl text-xs font-semibold">
                 🎬 {lang === 'fr' ? 'Voir le Trailer Littéraire' : 'View Literary Trailer'}
               </div>
