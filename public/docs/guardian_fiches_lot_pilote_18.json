@@ -1,0 +1,1011 @@
+[
+  {
+    "id": "gdn-0001-message-suspect",
+    "topic": "Reconnaître un message suspect en ligne",
+    "category": "securite_numerique",
+    "subcategory": "cyberharcelement",
+    "knowledge_type": "educatif",
+    "scenario": "Un inconnu envoie des messages répétés à un enfant sur un réseau social, en se montrant très amical et en posant beaucoup de questions personnelles.",
+    "intent": "demande_conseil",
+    "age_group": [
+      "10-14"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "modere",
+    "dimension_culturelle": "L'importance d'en parler en famille plutôt que de garder le secret, même si le contact semble être 'un ami'.",
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Apprendre à reconnaître les signaux d'un contact suspect en ligne et à ne jamais garder ce type d'échange secret.",
+    "resultat_apprentissage": "L'enfant sait identifier un message suspect (questions personnelles insistantes, cadeaux proposés, demande de garder le secret) et sait qu'il doit en parler à un adulte de confiance.",
+    "contenu_principal": "Un adulte digne de confiance ne demande jamais à un enfant de garder un secret vis-à-vis de ses parents, ni de multiplier les questions personnelles (adresse, école, habitudes) dès les premiers échanges. Trois signaux doivent alerter : l'insistance à obtenir des informations personnelles, les compliments excessifs ou cadeaux proposés en ligne, et la demande explicite ou implicite de ne rien dire à la famille. Face à ces signaux, la bonne réaction est de ne pas répondre davantage, de garder une trace (capture d'écran) et d'en parler immédiatement à un adulte de confiance — jamais de gérer la situation seul, même si on pense 'bien connaître' la personne.",
+    "conseils_parent": "Installez un climat où votre enfant sait qu'il ne sera jamais puni pour vous avoir montré un message étrange, même si la situation semble embarrassante. Demandez calmement à voir la conversation plutôt que de réagir avec colère — la colère pousse les enfants à cacher les prochains messages plutôt qu'à les signaler.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Ne jamais répondre aux questions personnelles d'un inconnu en ligne ; garder une preuve (capture d'écran) ; en parler à un adulte de confiance avant de bloquer le contact.",
+    "escalade_urgence": null,
+    "personnage_reference": "Sarah",
+    "episode_reference": null,
+    "saison_reference": 2,
+    "phrase_signature": null,
+    "trait_associe": "Sarah — impulsivité / besoin d'apprendre à demander de l'aide au bon moment",
+    "arc_saison": "comprendre",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "Common Sense Media",
+      "ChildNet"
+    ],
+    "keywords": [
+      "message suspect",
+      "réseau social",
+      "inconnu en ligne",
+      "secret",
+      "cyberharcèlement"
+    ],
+    "tags": [
+      "debutant",
+      "reseaux-sociaux"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0002-mot-de-passe-fort",
+    "topic": "Créer et protéger un mot de passe fort",
+    "category": "securite_numerique",
+    "subcategory": "mots_de_passe_authentification",
+    "knowledge_type": "educatif",
+    "scenario": "Un enfant crée son premier compte en ligne (jeu, école, réseau social) et doit choisir un mot de passe.",
+    "intent": "information_generale",
+    "age_group": [
+      "10-14"
+    ],
+    "user_profile": [
+      "enfant"
+    ],
+    "risk_level": "faible",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Comprendre ce qui rend un mot de passe solide et pourquoi il ne doit jamais être partagé, même avec un ami proche.",
+    "resultat_apprentissage": "L'enfant sait créer un mot de passe difficile à deviner et comprend qu'un mot de passe partagé n'est plus un mot de passe.",
+    "contenu_principal": "Un bon mot de passe mélange lettres, chiffres et symboles, fait au moins 8 à 10 caractères, et n'utilise jamais une information facile à deviner (date de naissance, prénom, nom de l'école). Une astuce simple : choisir une phrase que l'on aime et n'en garder que les premières lettres, en ajoutant des chiffres — par exemple 'J'aime le foot depuis 2020' devient 'Jaimelefoot2020!'. Un mot de passe ne se partage jamais, même avec un meilleur ami : le partager, c'est comme donner la clé de sa maison à quelqu'un d'autre.",
+    "conseils_parent": "Aidez votre enfant à créer son premier mot de passe ensemble plutôt que de le choisir à sa place — il le retiendra mieux et comprendra la logique derrière un mot de passe solide.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Ne jamais utiliser une information personnelle facile à deviner ; ne jamais partager son mot de passe, même avec un ami proche.",
+    "escalade_urgence": null,
+    "personnage_reference": "Yusuf",
+    "episode_reference": null,
+    "saison_reference": 1,
+    "phrase_signature": null,
+    "trait_associe": "Yusuf — génie technique qui aime expliquer comment les choses fonctionnent",
+    "arc_saison": "decouvrir",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "NIST",
+      "CISA"
+    ],
+    "keywords": [
+      "mot de passe",
+      "compte en ligne",
+      "sécurité",
+      "authentification"
+    ],
+    "tags": [
+      "debutant"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0003-arnaque-en-ligne",
+    "topic": "Reconnaître une arnaque en ligne",
+    "category": "securite_numerique",
+    "subcategory": "reconnaissance_arnaques",
+    "knowledge_type": "educatif",
+    "scenario": "Un adolescent reçoit un message annonçant qu'il a gagné un concours ou un cadeau, à condition de cliquer sur un lien ou de fournir des informations personnelles.",
+    "intent": "demande_conseil",
+    "age_group": [
+      "15-18"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "modere",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Reconnaître les signaux classiques d'une arnaque en ligne et adopter le réflexe de vérification avant de cliquer ou de répondre.",
+    "resultat_apprentissage": "L'adolescent sait identifier une offre trop belle pour être vraie et sait vérifier une information avant d'agir.",
+    "contenu_principal": "Trois signaux trahissent presque toujours une arnaque : une offre extraordinaire obtenue sans effort (gain à un concours jamais joué, cadeau surprise), une urgence artificielle ('offre valable seulement aujourd'hui'), et une demande d'informations personnelles ou bancaires pour 'débloquer' le gain. Face à ce type de message, la bonne réaction est de ne jamais cliquer sur le lien, de vérifier l'information directement sur le site officiel de l'organisme concerné, et d'en parler à un adulte avant toute action, surtout si de l'argent ou des données bancaires sont demandés.",
+    "conseils_parent": "Encouragez votre adolescent à vous montrer ce type de message sans crainte d'être jugé pour avoir 'failli se faire avoir' — la meilleure protection est de garder le dialogue ouvert, pas de dramatiser.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Ne jamais cliquer sur un lien promettant un gain inattendu ; vérifier directement sur le site officiel ; ne jamais transmettre d'informations bancaires en ligne sans vérification.",
+    "escalade_urgence": null,
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": 2,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": "comprendre",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "OWASP",
+      "CISA"
+    ],
+    "keywords": [
+      "arnaque",
+      "phishing",
+      "concours",
+      "lien suspect"
+    ],
+    "tags": [
+      "adolescents",
+      "reseaux-sociaux"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0004-capture-humiliante",
+    "topic": "Cyberharcèlement — une capture d'écran humiliante est partagée",
+    "category": "securite_numerique",
+    "subcategory": "cyberharcelement",
+    "knowledge_type": "educatif",
+    "scenario": "Un camarade de classe partage dans un groupe une capture d'écran ou une photo embarrassante d'un élève, qui commence à circuler et à faire l'objet de moqueries.",
+    "intent": "signalement",
+    "age_group": [
+      "10-14"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "eleve",
+    "dimension_culturelle": "Rappeler l'importance de la solidarité de groupe : les autres élèves qui refusent de faire circuler l'image protègent autant la victime que ceux qui la défendent ouvertement.",
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Comprendre que partager ou moquer une image humiliante aggrave la situation, et savoir comment réagir si on en est victime ou témoin.",
+    "resultat_apprentissage": "L'enfant sait ne pas participer au partage, garder une preuve, et solliciter l'aide d'un adulte de confiance rapidement plutôt que de gérer seul la situation.",
+    "contenu_principal": "Une image humiliante qui circule fait mal, et la première réaction — vouloir la faire disparaître seul ou se venger — aggrave souvent la situation. La bonne réaction : ne pas répondre aux moqueries, garder une preuve (capture d'écran, date), et en parler rapidement à un adulte de confiance (parent ou enseignant) qui pourra agir auprès de l'école. Si vous êtes témoin d'un tel partage, refuser de transférer l'image et le dire à un adulte est un geste de solidarité important — le silence des témoins permet souvent au harcèlement de continuer.",
+    "conseils_parent": "Réagissez avec calme et sans dramatiser devant votre enfant — la honte ressentie est déjà immense ; votre rôle est de le rassurer et d'agir concrètement (contact avec l'école), pas d'amplifier son sentiment de honte.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Ne pas répondre aux moqueries ; garder une preuve ; en parler à un adulte de confiance rapidement ; ne jamais transférer une image humiliante d'un camarade.",
+    "escalade_urgence": "Ce que tu ressens compte. Parle-en à un adulte de confiance — tes parents, un enseignant, ou une personne qui t'écoute bien.",
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": 2,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": "comprendre",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "Common Sense Media",
+      "ChildNet"
+    ],
+    "keywords": [
+      "cyberharcèlement",
+      "capture d'écran",
+      "humiliation",
+      "partage d'image"
+    ],
+    "tags": [
+      "harcelement",
+      "reseaux-sociaux"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0005-ne-jamais-partager",
+    "topic": "Ce qu'il ne faut jamais partager en ligne",
+    "category": "securite_numerique",
+    "subcategory": "confidentialite_en_ligne",
+    "knowledge_type": "educatif",
+    "scenario": "Un jeune enfant remplit un profil de jeu en ligne ou discute avec d'autres joueurs, et hésite sur ce qu'il peut dire de lui-même.",
+    "intent": "information_generale",
+    "age_group": [
+      "6-9"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "modere",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Connaître la liste simple des informations personnelles à ne jamais partager en ligne avec des inconnus.",
+    "resultat_apprentissage": "L'enfant sait citer les informations à garder pour lui (adresse, école, numéro de téléphone, localisation) et pourquoi.",
+    "contenu_principal": "En ligne, certaines informations doivent toujours rester privées, même dans un jeu amusant ou une discussion sympathique : son adresse, le nom et l'adresse de son école, son numéro de téléphone, l'endroit où il se trouve en ce moment, et des photos de sa maison. Ces informations permettent à quelqu'un de savoir où retrouver un enfant dans la vraie vie — c'est pour cela qu'elles restent toujours secrètes, même pour un contact qui semble sympathique depuis longtemps.",
+    "conseils_parent": "Faites un jeu régulier avec votre enfant : citer ensemble la liste des informations à ne jamais partager, jusqu'à ce que ce soit un réflexe naturel plutôt qu'une règle imposée.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Ne jamais partager en ligne : adresse, école, numéro de téléphone, localisation en temps réel, photos de sa maison.",
+    "escalade_urgence": null,
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": 1,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": "decouvrir",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "Internet Matters",
+      "UNICEF"
+    ],
+    "keywords": [
+      "informations personnelles",
+      "vie privée",
+      "jeu en ligne"
+    ],
+    "tags": [
+      "debutant"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0006-usage-responsable-ia",
+    "topic": "Usage responsable de l'intelligence artificielle",
+    "category": "securite_numerique",
+    "subcategory": "usage_responsable_ia",
+    "knowledge_type": "educatif",
+    "scenario": "Un adolescent utilise un chatbot IA ou un générateur d'images pour ses devoirs ou ses loisirs, et se demande ce qu'il peut faire ou non.",
+    "intent": "information_generale",
+    "age_group": [
+      "15-18"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "faible",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Comprendre les bons réflexes d'un usage responsable des outils d'intelligence artificielle : vérification, transparence, esprit critique.",
+    "resultat_apprentissage": "L'adolescent sait qu'une IA peut se tromper ou halluciner des informations, et sait qu'il doit vérifier ce qu'elle produit avant de l'utiliser.",
+    "contenu_principal": "Les outils d'intelligence artificielle sont puissants mais imparfaits : ils peuvent inventer des informations fausses avec assurance (on appelle cela une 'hallucination'), ou produire des réponses biaisées. Trois bons réflexes : toujours vérifier une information importante donnée par une IA auprès d'une autre source, ne jamais présenter un travail entièrement généré par IA comme totalement personnel sans le dire lorsque c'est demandé, et ne jamais partager d'informations personnelles ou sensibles dans une conversation avec une IA généraliste non conçue pour les mineurs.",
+    "conseils_parent": "Discutez ouvertement avec votre adolescent de son usage des IA — l'interdiction totale pousse souvent à un usage caché ; mieux vaut l'accompagner dans un usage réfléchi.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Toujours vérifier une information importante donnée par une IA ; ne jamais partager d'informations personnelles avec une IA généraliste.",
+    "escalade_urgence": null,
+    "personnage_reference": "Yusuf",
+    "episode_reference": null,
+    "saison_reference": 2,
+    "phrase_signature": null,
+    "trait_associe": "Yusuf — apprend à utiliser la technologie comme outil au service des autres, jamais comme refuge",
+    "arc_saison": "comprendre",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "UNESCO"
+    ],
+    "keywords": [
+      "intelligence artificielle",
+      "chatbot",
+      "hallucination",
+      "esprit critique"
+    ],
+    "tags": [
+      "adolescents",
+      "ia"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0007-inconnu-accompagner",
+    "topic": "Un inconnu propose d'accompagner l'enfant quelque part",
+    "category": "securite_physique",
+    "subcategory": "reconnaissance_situations_dangereuses",
+    "knowledge_type": "educatif",
+    "scenario": "Au marché ou dans la rue, un adulte inconnu, poli et souriant, propose à un enfant de l'accompagner voir quelque chose (un animal, un jeu, un objet) à l'écart des regards.",
+    "intent": "information_generale",
+    "age_group": [
+      "6-9"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "critique",
+    "dimension_culturelle": "S'appuyer sur la solidarité du quartier : un vendeur, un voisin ou un commerçant connu est souvent le premier réflexe d'alerte disponible.",
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Savoir qu'il est toujours juste de dire non à un adulte inconnu, même poli, qui propose de s'éloigner seul avec lui.",
+    "resultat_apprentissage": "L'enfant sait refuser fermement, s'éloigner, et alerter immédiatement un adulte de confiance ou toute personne présente (vendeur, voisin).",
+    "contenu_principal": "Un adulte digne de confiance ne demande jamais à un enfant de le suivre seul, en secret, loin des regards — même pour une raison qui semble amusante ou inoffensive (voir un chiot, un jeu, un cadeau). La politesse ne doit jamais empêcher de dire non : il est toujours juste de refuser, même face à un adulte souriant et insistant. La bonne réaction : dire 'non' fermement, s'éloigner immédiatement vers un lieu avec du monde, et alerter la première personne de confiance disponible (un vendeur connu, un voisin, un agent de sécurité) puis ses parents dès que possible.",
+    "conseils_parent": "Entraînez régulièrement votre enfant, par le jeu, à repérer les adultes de confiance disponibles dans les lieux qu'il fréquente (le vendeur du quartier, telle voisine). Évitez le message 'ne jamais parler aux inconnus', trop absolu et difficile à appliquer ; préférez 'ne jamais suivre un inconnu qui te demande de partir seul avec lui, même s'il est gentil'.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Dire non fermement, ne jamais suivre un inconnu à l'écart, s'éloigner vers un lieu avec du monde, alerter un adulte de confiance immédiatement.",
+    "escalade_urgence": "Ceci est important et urgent. Va tout de suite voir un adulte proche de toi, ou demande à quelqu'un d'appeler les secours.",
+    "personnage_reference": "Junior",
+    "episode_reference": "L'Inconnu du Marché",
+    "saison_reference": 1,
+    "phrase_signature": null,
+    "trait_associe": "Junior — naïveté et confiance excessive envers les adultes inconnus",
+    "arc_saison": "decouvrir",
+    "lecon_episode": "Un adulte digne de confiance ne demande jamais à un enfant de le suivre seul, en secret, loin des regards.",
+    "references": [],
+    "sources_autorite": [
+      "UNICEF",
+      "Croix-Rouge"
+    ],
+    "keywords": [
+      "inconnu",
+      "marché",
+      "danger physique",
+      "enlèvement",
+      "dire non"
+    ],
+    "tags": [
+      "debutant",
+      "urgence"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0008-se-perdre-lieu-public",
+    "topic": "Se perdre ou être séparé d'un adulte dans un lieu public",
+    "category": "securite_physique",
+    "subcategory": "securite_rue_communaute",
+    "knowledge_type": "educatif",
+    "scenario": "Un enfant se retrouve séparé de ses parents au marché, dans un centre commercial ou lors d'un événement de quartier très fréquenté.",
+    "intent": "information_generale",
+    "age_group": [
+      "6-9"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "eleve",
+    "dimension_culturelle": "S'appuyer sur les figures connues et fixes du quartier (vendeuse du marché, agent de sécurité) comme premiers points de repère en cas de besoin.",
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Savoir quoi faire immédiatement si on se retrouve séparé d'un adulte dans un lieu public.",
+    "resultat_apprentissage": "L'enfant sait rester sur place ou se diriger vers un adulte identifiable (vendeur, agent en uniforme), et ne jamais suivre un inconnu qui propose de l'aider à chercher ses parents.",
+    "contenu_principal": "Si un enfant se retrouve séparé de ses parents dans un lieu public, la meilleure réaction est de rester à l'endroit où il a remarqué la séparation, ou de se diriger vers un adulte facilement identifiable comme responsable du lieu — une vendeuse connue, un agent en uniforme, une personne derrière un comptoir. Il ne faut jamais suivre un inconnu, même très gentil, qui propose d''aider à chercher les parents' en s'éloignant du lieu : cette proposition doit toujours être refusée, et l'aide doit être demandée uniquement à un adulte responsable du lieu, sans le suivre nulle part.",
+    "conseils_parent": "Avant chaque sortie dans un lieu fréquenté, convenez avec votre enfant d'un point de rendez-vous fixe et identifiez ensemble un adulte responsable du lieu (vendeur, agent) vers qui se diriger en cas de besoin.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Rester sur place ou se diriger vers un adulte responsable du lieu (vendeur, agent en uniforme) ; ne jamais suivre un inconnu qui propose son aide en s'éloignant.",
+    "escalade_urgence": null,
+    "personnage_reference": null,
+    "episode_reference": "L'Inconnu du Marché",
+    "saison_reference": 1,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": "decouvrir",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "Croix-Rouge"
+    ],
+    "keywords": [
+      "se perdre",
+      "marché",
+      "lieu public",
+      "séparation"
+    ],
+    "tags": [
+      "debutant",
+      "urgence"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0009-danger-a-la-maison",
+    "topic": "Reconnaître une situation dangereuse à la maison et savoir qui appeler",
+    "category": "securite_physique",
+    "subcategory": "reconnaissance_situations_dangereuses",
+    "knowledge_type": "educatif",
+    "scenario": "Un enfant vit une situation difficile ou effrayante à la maison et ne sait pas s'il a le droit d'en parler à quelqu'un.",
+    "intent": "demande_conseil",
+    "age_group": [
+      "10-14"
+    ],
+    "user_profile": [
+      "enfant"
+    ],
+    "risk_level": "critique",
+    "dimension_culturelle": "Rappeler que la famille élargie (grand-mère, tante, oncle, voisin de confiance) peut être un premier relais accessible, en plus des adultes de l'école.",
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Savoir qu'un enfant a toujours le droit de demander de l'aide s'il se sent en danger chez lui, quelle que soit la personne concernée.",
+    "resultat_apprentissage": "L'enfant sait qu'il n'est jamais seul face à une situation difficile à la maison et connaît au moins un adulte de confiance à qui en parler.",
+    "contenu_principal": "Un enfant a toujours le droit de se sentir en sécurité, y compris à la maison. Si une situation fait peur, blesse, ou met mal à l'aise de façon répétée, ce n'est jamais 'normal' et ce n'est jamais la faute de l'enfant. Il est toujours juste d'en parler à un adulte de confiance — un enseignant, un membre de la famille élargie, un voisin de confiance — même si la situation implique quelqu'un de la famille proche. Garder ce genre de situation secrète, même par peur ou par loyauté familiale, empêche de recevoir l'aide nécessaire.",
+    "conseils_parent": null,
+    "conseils_enseignant": null,
+    "conseil_securite": "Il est toujours juste de parler d'une situation qui fait peur à la maison, à un adulte de confiance en dehors de la situation elle-même.",
+    "escalade_urgence": "C'est important que tu en parles tout de suite à un adulte de confiance — un parent, un enseignant, ou toute personne en qui tu as confiance.",
+    "personnage_reference": "Inspectrice Fatima",
+    "episode_reference": null,
+    "saison_reference": null,
+    "phrase_signature": null,
+    "trait_associe": "Fatima — figure d'autorité qui protège sans jamais infantiliser",
+    "arc_saison": null,
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "UNICEF",
+      "OMS"
+    ],
+    "keywords": [
+      "danger à la maison",
+      "sécurité de l'enfant",
+      "adulte de confiance"
+    ],
+    "tags": [
+      "urgence"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0010-dire-non-secret",
+    "topic": "Dire non à un adulte qui demande de garder un secret",
+    "category": "securite_physique",
+    "subcategory": "reconnaissance_situations_dangereuses",
+    "knowledge_type": "educatif",
+    "scenario": "Un adulte, connu ou inconnu de l'enfant, lui demande explicitement de garder un secret vis-à-vis de ses parents.",
+    "intent": "information_generale",
+    "age_group": [
+      "6-9"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "critique",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Distinguer un 'bon secret' (une surprise joyeuse et temporaire) d'un 'mauvais secret' (qui met mal à l'aise et qu'un adulte demande de cacher aux parents).",
+    "resultat_apprentissage": "L'enfant sait qu'un secret qui met mal à l'aise ou qui concerne un adulte doit toujours être raconté à ses parents, même si on lui a demandé de se taire.",
+    "contenu_principal": "Il existe une différence importante entre un 'bon secret' — comme une surprise d'anniversaire, joyeux et de courte durée — et un 'mauvais secret' — qui met mal à l'aise, qui dure, et qu'un adulte demande explicitement de cacher aux parents. Aucun adulte digne de confiance ne demande à un enfant de garder un secret qui le concerne vis-à-vis de ses parents. Face à une telle demande, la bonne réaction est de dire non, puis de raconter la situation à ses parents ou à un autre adulte de confiance dès que possible — même si l'adulte en question a insisté ou a semblé fâché.",
+    "conseils_parent": "Répétez régulièrement à votre enfant qu'il ne sera jamais puni pour vous avoir raconté un secret qu'on lui a demandé de garder — c'est cette assurance qui lui permettra de parler le moment venu.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Un secret qui met mal à l'aise et qu'un adulte demande de cacher aux parents doit toujours être raconté, même après coup.",
+    "escalade_urgence": "C'est important que tu en parles tout de suite à un adulte de confiance — un parent, un enseignant, ou toute personne en qui tu as confiance.",
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": 1,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": "decouvrir",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "UNICEF"
+    ],
+    "keywords": [
+      "secret",
+      "adulte",
+      "malaise",
+      "protection de l'enfance"
+    ],
+    "tags": [
+      "debutant",
+      "urgence"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0011-fausse-nouvelle",
+    "topic": "Reconnaître une fausse nouvelle (fake news)",
+    "category": "citoyennete_numerique",
+    "subcategory": "desinformation",
+    "knowledge_type": "educatif",
+    "scenario": "Un adolescent voit circuler une information choquante sur les réseaux sociaux et hésite à la croire ou à la partager.",
+    "intent": "information_generale",
+    "age_group": [
+      "15-18"
+    ],
+    "user_profile": [
+      "enfant"
+    ],
+    "risk_level": "faible",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Acquérir un réflexe simple de vérification avant de croire ou de partager une information choquante trouvée en ligne.",
+    "resultat_apprentissage": "L'adolescent sait vérifier une source avant de partager une information et comprend l'impact d'une fausse nouvelle partagée trop vite.",
+    "contenu_principal": "Une information qui provoque une émotion forte (colère, peur, indignation) doit toujours être vérifiée avant d'être partagée — c'est souvent ce type d'émotion que recherchent les fausses nouvelles pour se propager vite. Trois réflexes simples : vérifier si d'autres sources fiables relaient la même information, regarder qui a publié l'information en premier (un compte anonyme est un signal d'alerte), et éviter de partager 'juste au cas où' — un partage précipité peut faire beaucoup de mal, même sans mauvaise intention.",
+    "conseils_parent": "Prenez l'habitude de vérifier ensemble une information qui circule en famille — cela montre l'exemple sans donner l'impression de faire la leçon.",
+    "conseils_enseignant": null,
+    "conseil_securite": "Vérifier une information choquante auprès d'au moins une autre source fiable avant de la partager.",
+    "escalade_urgence": null,
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": 2,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": "comprendre",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "UNESCO",
+      "Common Sense Media"
+    ],
+    "keywords": [
+      "fake news",
+      "désinformation",
+      "vérification",
+      "partage"
+    ],
+    "tags": [
+      "adolescents",
+      "reseaux-sociaux"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0012-pression-des-pairs",
+    "topic": "Gérer la pression des pairs sur les réseaux sociaux",
+    "category": "intelligence_emotionnelle",
+    "subcategory": "gestion_pression_pairs",
+    "knowledge_type": "educatif",
+    "scenario": "Un enfant se sent poussé par ses camarades à participer à un défi ('challenge'), à publier quelque chose, ou à exclure quelqu'un pour 'faire comme les autres'.",
+    "intent": "demande_conseil",
+    "age_group": [
+      "10-14"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "modere",
+    "dimension_culturelle": "Valoriser le courage de rester soi-même face au groupe comme une qualité respectée, pas comme une marginalisation.",
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Reconnaître la pression des pairs et développer des façons simples d'y résister sans se sentir exclu.",
+    "resultat_apprentissage": "L'enfant sait qu'il peut dire non à une pression de groupe et connaît des façons concrètes de le faire sans perdre ses amis.",
+    "contenu_principal": "La pression des pairs — l'envie de faire comme tout le monde pour être accepté — est une expérience normale, mais elle ne doit jamais pousser à faire quelque chose qui met mal à l'aise, qui blesse quelqu'un d'autre, ou qui semble dangereux. Des phrases simples permettent de dire non sans conflit : 'ce n'est pas pour moi', 'je préfère pas', ou simplement changer de sujet. Un véritable ami accepte un refus sans faire de chantage à l'amitié — et s'éloigner d'un groupe qui insiste malgré un refus clair est parfois la meilleure décision.",
+    "conseils_parent": "Valorisez les moments où votre enfant a résisté à une pression de groupe, même sur un sujet mineur — cela renforce sa confiance à le refaire sur un sujet plus important.",
+    "conseils_enseignant": null,
+    "conseil_securite": null,
+    "escalade_urgence": null,
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": 2,
+    "phrase_signature": null,
+    "trait_associe": "Tom et Théo — la pression des pairs entre camarades de classe",
+    "arc_saison": "comprendre",
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "Common Sense Media"
+    ],
+    "keywords": [
+      "pression des pairs",
+      "réseaux sociaux",
+      "estime de soi",
+      "amitié"
+    ],
+    "tags": [
+      "emotions",
+      "reseaux-sociaux"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0013-demander-de-l-aide",
+    "topic": "Demander de l'aide au lieu de tout garder pour soi",
+    "category": "intelligence_emotionnelle",
+    "subcategory": "communication_empathie",
+    "knowledge_type": "educatif",
+    "scenario": "Un enfant a l'habitude de vouloir tout gérer seul, même quand une situation le dépasse, par peur de déranger ou de paraître faible.",
+    "intent": "demande_conseil",
+    "age_group": [
+      "10-14"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "modere",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Comprendre que demander de l'aide est un signe de force et de maturité, pas de faiblesse.",
+    "resultat_apprentissage": "L'enfant identifie au moins une personne de confiance à qui il peut demander de l'aide quand une situation le dépasse.",
+    "contenu_principal": "Vouloir tout gérer seul semble parfois plus fort, mais c'est souvent l'inverse : reconnaître qu'une situation nous dépasse et demander de l'aide demande du courage. Personne ne peut tout porter seul, et ce n'est pas déranger que de partager un problème avec un adulte de confiance ou un ami proche. Un bon réflexe : identifier à l'avance une ou deux personnes à qui on peut toujours parler, même d'un petit souci, pour que demander de l'aide devienne naturel plutôt qu'une décision difficile au moment où l'on en a le plus besoin.",
+    "conseils_parent": "Montrez à votre enfant qu'il est normal, y compris pour les adultes, de demander de l'aide — partagez avec lui un exemple simple où vous avez vous-même demandé du soutien.",
+    "conseils_enseignant": null,
+    "conseil_securite": null,
+    "escalade_urgence": null,
+    "personnage_reference": "Sarah",
+    "episode_reference": null,
+    "saison_reference": null,
+    "phrase_signature": null,
+    "trait_associe": "Sarah — apprend que le vrai courage est de savoir demander de l'aide au bon moment",
+    "arc_saison": null,
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "OMS"
+    ],
+    "keywords": [
+      "demander de l'aide",
+      "autonomie",
+      "confiance",
+      "soutien"
+    ],
+    "tags": [
+      "emotions"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0014-oser-prendre-la-parole",
+    "topic": "Oser prendre la parole quand on a remarqué quelque chose d'important",
+    "category": "intelligence_emotionnelle",
+    "subcategory": "communication_empathie",
+    "knowledge_type": "educatif",
+    "scenario": "Un enfant timide a remarqué quelque chose d'important (un camarade en difficulté, une situation suspecte) mais hésite à en parler par peur de se tromper ou d'attirer l'attention.",
+    "intent": "demande_conseil",
+    "age_group": [
+      "10-14"
+    ],
+    "user_profile": [
+      "enfant",
+      "parent"
+    ],
+    "risk_level": "modere",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Comprendre que ce que l'on observe a de la valeur, même quand on est timide, et qu'il vaut mieux en parler que de garder cela pour soi.",
+    "resultat_apprentissage": "L'enfant sait qu'il a le droit et parfois le devoir de partager une observation importante, même s'il n'est pas sûr à 100%.",
+    "contenu_principal": "Les enfants les plus discrets remarquent souvent des choses que les autres ne voient pas — et ces observations ont de la valeur, même si l'on n'est pas certain à 100% de leur importance. Attendre d'être 'complètement sûr' avant de parler fait parfois perdre un temps précieux. Un bon réflexe : en parler d'abord à une seule personne de confiance, calmement, sans avoir besoin d'être devant tout le monde — ce n'est pas grave de se tromper en signalant quelque chose par précaution.",
+    "conseils_parent": "Accueillez chaque observation de votre enfant avec attention, même si elle semble anodine — cela l'encouragera à revenir vers vous la prochaine fois, notamment si l'enjeu est plus important.",
+    "conseils_enseignant": null,
+    "conseil_securite": null,
+    "escalade_urgence": null,
+    "personnage_reference": "Ily",
+    "episode_reference": null,
+    "saison_reference": null,
+    "phrase_signature": null,
+    "trait_associe": "Ily — apprend que ses observations ont de la valeur et qu'elle a le droit de les exprimer",
+    "arc_saison": null,
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [],
+    "keywords": [
+      "prise de parole",
+      "observation",
+      "timidité",
+      "confiance en soi"
+    ],
+    "tags": [
+      "emotions"
+    ],
+    "difficulty": "simple",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0015-protocole-enseignant-danger-maison",
+    "topic": "Protocole enseignant — un élève révèle une situation de danger à la maison",
+    "category": "securite_physique",
+    "subcategory": "criteres_escalade",
+    "knowledge_type": "protocole",
+    "scenario": "Un élève confie à son enseignant, pendant ou après le cours, qu'il vit une situation difficile ou dangereuse à la maison.",
+    "intent": "signalement",
+    "age_group": [
+      "enseignant"
+    ],
+    "user_profile": [
+      "enseignant"
+    ],
+    "risk_level": "critique",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Donner à l'enseignant une structure claire pour réagir à une révélation de danger sans improviser, tout en respectant les procédures propres à son établissement.",
+    "resultat_apprentissage": "L'enseignant sait structurer sa réaction en trois temps : Évaluer, Agir, Escalader — sans jamais promettre un secret total à l'élève ni gérer seul une situation à risque élevé.",
+    "contenu_principal": "ÉVALUER : Écoutez sans interrompre ni multiplier les questions détaillées — votre rôle n'est pas d'enquêter mais d'accueillir la parole. Ne promettez jamais 'je ne le dirai à personne' : expliquez à l'élève que vous devez en parler à des personnes qui peuvent l'aider, dans son intérêt. Notez les faits rapportés avec précision (mots employés, date) sans les interpréter ni les exagérer. AGIR : Restez calme et rassurant devant l'élève ; ne montrez ni panique ni jugement. Ne confrontez jamais directement la personne mise en cause. Informez la direction de votre établissement dans les meilleurs délais, en suivant le protocole interne de votre école. ESCALADER : Si un danger immédiat est identifié, la direction et/ou les services compétents locaux doivent être alertés sans délai, selon le protocole de votre établissement. Documentez votre signalement (date, personnes informées) pour assurer la traçabilité du suivi.",
+    "conseils_parent": null,
+    "conseils_enseignant": "Évaluer → Agir → Escalader. Ne jamais promettre un secret total. Ne jamais confronter seul la personne mise en cause. Toujours transmettre à la direction selon le protocole de votre établissement.",
+    "conseil_securite": null,
+    "escalade_urgence": "Cette situation doit être signalée à la direction de votre établissement et, selon la gravité, aux autorités compétentes locales, en suivant le protocole de votre école.",
+    "personnage_reference": "Inspectrice Fatima",
+    "episode_reference": null,
+    "saison_reference": null,
+    "phrase_signature": null,
+    "trait_associe": "Fatima — autorité qui écoute sans juger, sans jamais infantiliser",
+    "arc_saison": null,
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "UNICEF",
+      "OMS"
+    ],
+    "keywords": [
+      "protocole enseignant",
+      "révélation",
+      "danger à la maison",
+      "escalade",
+      "signalement"
+    ],
+    "tags": [
+      "protocole",
+      "urgence",
+      "enseignant"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0016-protocole-cyberharcelement-collectif",
+    "topic": "Protocole enseignant — incident de cyberharcèlement collectif touchant plusieurs élèves",
+    "category": "securite_numerique",
+    "subcategory": "incident_numerique_collectif",
+    "knowledge_type": "protocole",
+    "scenario": "Un enseignant découvre qu'un contenu (image, rumeur, message) touchant plusieurs élèves de sa classe circule activement en ligne, créant tensions et exclusions.",
+    "intent": "signalement",
+    "age_group": [
+      "enseignant"
+    ],
+    "user_profile": [
+      "enseignant"
+    ],
+    "risk_level": "eleve",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Donner à l'enseignant une structure claire pour gérer un incident numérique touchant plusieurs élèves simultanément, sans amplifier la crise.",
+    "resultat_apprentissage": "L'enseignant sait cartographier rapidement l'ampleur de l'incident, agir sans désigner de coupable prématurément, et escalader vers la direction selon un calendrier clair.",
+    "contenu_principal": "ÉVALUER : Identifiez rapidement l'ampleur de la situation — combien d'élèves sont concernés, en tant que victimes, témoins ou diffuseurs, sans chercher à mener une enquête approfondie vous-même. Ne partagez jamais publiquement en classe le contenu incriminé, même pour 'sensibiliser'. AGIR : Adressez-vous à la classe de façon générale sur le respect en ligne, sans désigner nommément d'élève tant que la situation n'est pas clarifiée avec la direction. Rassurez les élèves identifiés comme victimes individuellement, hors du groupe. ESCALADER : Informez la direction le jour même de la découverte de l'incident ; selon l'ampleur, une communication commune aux familles concernées peut être nécessaire, toujours pilotée par la direction selon le protocole de l'établissement.",
+    "conseils_parent": null,
+    "conseils_enseignant": "Évaluer l'ampleur sans enquêter seul → Agir sans désigner de coupable en public → Escalader à la direction le jour même. Ne jamais rediffuser le contenu incriminé, même pour sensibiliser.",
+    "conseil_securite": null,
+    "escalade_urgence": "Cette situation doit être signalée à la direction de votre établissement et, selon la gravité, aux autorités compétentes locales, en suivant le protocole de votre école.",
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": null,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": null,
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "ChildNet",
+      "UNICEF"
+    ],
+    "keywords": [
+      "protocole enseignant",
+      "cyberharcèlement collectif",
+      "classe",
+      "escalade"
+    ],
+    "tags": [
+      "protocole",
+      "enseignant"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0017-protocole-contenu-inapproprie-classe",
+    "topic": "Protocole enseignant — un élève partage un contenu inapproprié reçu en ligne pendant les cours",
+    "category": "securite_numerique",
+    "subcategory": "incident_numerique_collectif",
+    "knowledge_type": "protocole",
+    "scenario": "Un élève montre ou partage en classe un contenu inapproprié (violent, sexuel, choquant) reçu sur son téléphone, exposant potentiellement d'autres élèves.",
+    "intent": "signalement",
+    "age_group": [
+      "enseignant"
+    ],
+    "user_profile": [
+      "enseignant"
+    ],
+    "risk_level": "eleve",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Donner à l'enseignant une réaction immédiate claire face à un contenu inapproprié partagé en classe, qui limite l'exposition des autres élèves.",
+    "resultat_apprentissage": "L'enseignant sait faire cesser immédiatement la diffusion, sécuriser l'appareil, et transmettre l'incident à la direction sans consulter lui-même le contenu en détail.",
+    "contenu_principal": "ÉVALUER : Faites cesser immédiatement la diffusion en demandant calmement de ranger l'appareil, sans le consulter vous-même en détail ni le faire circuler davantage pour 'vérifier'. Notez qui étaient les élèves présents et exposés. AGIR : Restez neutre et évitez toute réaction de choc visible devant la classe, qui amplifierait l'incident. Ne confisquez l'appareil que si le règlement de votre établissement le prévoit explicitement. ESCALADER : Transmettez l'incident à la direction le jour même avec les faits observés (sans détailler le contenu de façon explicite dans votre rapport). La direction évalue avec vous si une communication aux familles des élèves exposés est nécessaire, et si un signalement aux autorités compétentes s'impose selon la nature du contenu.",
+    "conseils_parent": null,
+    "conseils_enseignant": "Faire cesser la diffusion immédiatement sans consulter le contenu en détail → Rester neutre devant la classe → Transmettre à la direction le jour même.",
+    "conseil_securite": null,
+    "escalade_urgence": "Cette situation doit être signalée à la direction de votre établissement et, selon la gravité, aux autorités compétentes locales, en suivant le protocole de votre école.",
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": null,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": null,
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "UNICEF"
+    ],
+    "keywords": [
+      "protocole enseignant",
+      "contenu inapproprié",
+      "classe",
+      "escalade"
+    ],
+    "tags": [
+      "protocole",
+      "enseignant",
+      "urgence"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  },
+  {
+    "id": "gdn-0018-protocole-parent-contact-inconnu",
+    "topic": "Protocole parent — mon enfant me dit avoir été contacté par un inconnu en ligne",
+    "category": "securite_numerique",
+    "subcategory": "cyberharcelement",
+    "knowledge_type": "protocole",
+    "scenario": "Un enfant confie à son parent qu'un inconnu l'a contacté en ligne, sans que le parent sache précisément comment réagir sans dramatiser ni minimiser.",
+    "intent": "demande_conseil",
+    "age_group": [
+      "parent"
+    ],
+    "user_profile": [
+      "parent"
+    ],
+    "risk_level": "eleve",
+    "dimension_culturelle": null,
+    "language": "fr",
+    "cultural_adaptation": null,
+    "objectif_educatif": "Donner au parent une réaction structurée qui encourage l'enfant à continuer de se confier, plutôt que de le décourager par une réaction trop vive.",
+    "resultat_apprentissage": "Le parent sait accueillir la confidence sans dramatiser, rassembler les informations utiles calmement, et décider posément des suites à donner.",
+    "contenu_principal": "ACCUEILLIR : Remerciez votre enfant d'être venu vous en parler — c'est le geste le plus important, quelle que soit la gravité réelle de la situation. Évitez une réaction de choc ou de colère visible, qui pourrait le dissuader de se confier la prochaine fois. COMPRENDRE : Demandez calmement à voir les échanges si votre enfant est d'accord, sans le forcer immédiatement. Notez le nom du compte, la plateforme, et depuis quand les échanges ont commencé. AGIR : Bloquez et signalez le compte sur la plateforme concernée. Conservez une capture d'écran avant de bloquer, au cas où une suite serait nécessaire. Si les échanges comportaient des éléments inquiétants (demande de photos, propositions de rencontre, pression), contactez les autorités compétentes locales pour signaler la situation, sans attendre.",
+    "conseils_parent": "Accueillir sans dramatiser → Comprendre calmement (compte, plateforme, durée) → Bloquer, signaler, conserver une preuve → Contacter les autorités si des éléments inquiétants sont présents (demande de photos, rencontre, pression).",
+    "conseils_enseignant": null,
+    "conseil_securite": "Conserver une preuve avant de bloquer le contact ; ne jamais confronter directement la personne derrière le compte.",
+    "escalade_urgence": "Ceci est important et urgent. Contactez les autorités compétentes locales si les échanges comportaient une demande de photos, une proposition de rencontre, ou une pression insistante.",
+    "personnage_reference": null,
+    "episode_reference": null,
+    "saison_reference": null,
+    "phrase_signature": null,
+    "trait_associe": null,
+    "arc_saison": null,
+    "lecon_episode": null,
+    "references": [],
+    "sources_autorite": [
+      "ChildNet",
+      "UNICEF"
+    ],
+    "keywords": [
+      "protocole parent",
+      "inconnu en ligne",
+      "signalement",
+      "escalade"
+    ],
+    "tags": [
+      "protocole",
+      "parent",
+      "urgence"
+    ],
+    "difficulty": "intermediaire",
+    "version": "0.1.0",
+    "review_status": "brouillon",
+    "quality_score": null,
+    "created_at": "2026-07-23T00:00:00Z",
+    "updated_at": "2026-07-23T00:00:00Z",
+    "reviewed_by": [],
+    "next_review_date": null
+  }
+]

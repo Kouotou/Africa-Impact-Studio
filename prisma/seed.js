@@ -18,7 +18,7 @@ async function main() {
     data: {
       email: 'admin@africaimpact.studio',
       name: 'Directeur Editorial',
-      passwordHash: '$2b$10$EPfdb09Q9Z.PjFfG8qX7Qe25a81T6wL5Hw16.MhB47fQ0504h/8r2', // bcrypt for 'AdminImpact2026!'
+      passwordHash: '$2a$10$6oUi2QXJAdt2/zzs0feBL.5HEmGTVIY21vgF6O5D5MTstGbVpyC1q', // bcrypt for 'AdminImpact2026!'
       role: 'ADMIN',
     },
   });
@@ -34,8 +34,8 @@ async function main() {
       category: 'Animation & Cybersécurité',
       status: 'Active',
       isFlagship: true,
-      coverImage: '/assets/projects/gardiens-hero.jpg',
-      images: '/assets/projects/amina.jpg,/assets/projects/kofi.jpg,/assets/projects/malik.jpg',
+      coverImage: '/assets/projects/gardiens-characters.jpg',
+      images: '/assets/main-characters/Ahmad.jpg,/assets/main-characters/Sarah.jpg,/assets/main-characters/Ily.jpg,/assets/main-characters/Yusuf.jpg,/assets/main-characters/Junior.jpg',
     },
   });
 

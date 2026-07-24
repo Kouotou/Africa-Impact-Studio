@@ -49,7 +49,13 @@ export default async function BlogListingPage({ params }: BlogPageProps) {
               key={post.id}
               className="flex flex-col rounded-2xl overflow-hidden glass border border-[var(--color-border)] shadow-sm glow-card h-full"
             >
-              <div className="aspect-video w-full relative bg-deep-green/10">
+              <div className="aspect-video w-full relative bg-deep-green/10 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={post.coverImage}
+                  alt={post.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-terracotta-gold opacity-10" />
                 <div className="absolute top-4 left-4 px-2.5 py-1 rounded-md bg-deep-green text-white dark:bg-terracotta text-[10px] font-bold uppercase tracking-wider">
                   {post.category}

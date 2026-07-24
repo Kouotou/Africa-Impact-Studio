@@ -54,6 +54,16 @@ export default async function BlogPostDetailPage({ params }: BlogPostPageProps) 
           {lang === 'fr' ? 'Retour au blog' : 'Back to blog'}
         </Link>
 
+        {/* Cover image */}
+        <div className="aspect-video w-full relative rounded-2xl overflow-hidden bg-deep-green/10 mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={post.coverImage}
+            alt={post.title}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
         {/* Article Meta */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-4 text-xs font-bold text-terracotta dark:text-gold uppercase tracking-wider">

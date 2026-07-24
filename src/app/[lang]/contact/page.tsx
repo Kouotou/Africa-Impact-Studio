@@ -65,6 +65,7 @@ export default function ContactPage({ params }: ContactPageProps) {
             {
               from_name: formData.name,
               from_email: formData.email,
+              reply_to: formData.email,
               subject: formData.subject,
               message: formData.message,
               to_email: 'africaimpactstudio@gmail.com',

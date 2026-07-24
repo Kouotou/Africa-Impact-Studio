@@ -4,7 +4,7 @@
 import React, { useState, useEffect, use } from 'react';
 import { getDictionary } from '@/lib/get-dictionary';
 import { GridPattern, OrganicBlob } from '@/components/brand/PatternBackground';
-import { KeyRound, LogOut, Plus, Trash2, Mail, FileText, LayoutGrid, Users, Download, Lock } from 'lucide-react';
+import { KeyRound, LogOut, Plus, Trash2, Pencil, X, Mail, FileText, LayoutGrid, Users, Download, Lock } from 'lucide-react';
 
 interface AdminPageProps {
   params: Promise<{ lang: string }>;
@@ -15,51 +15,59 @@ export default function AdminDashboard({ params }: AdminPageProps) {
   const lang = resolvedParams.lang === 'en' ? 'en' : 'fr';
   const [dict, setDict] = useState<any>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [checkingSession, setCheckingSession] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState('');
-  
+
   // Dashboard lists
   const [blogPosts, setBlogPosts] = useState<any[]>([]);
   const [projects, setProjects] = useState<any[]>([]);
   const [partners, setPartners] = useState<any[]>([]);
   const [downloads, setDownloads] = useState<any[]>([]);
   const [contactMessages, setContactMessages] = useState<any[]>([]);
-  
+
   const [activeTab, setActiveTab] = useState<'blog' | 'projects' | 'messages' | 'assets'>('blog');
-  
+
   // Forms state
   const [newPost, setNewPost] = useState({ title: '', category: 'IA', excerpt: '', content: '' });
+  const [postImage, setPostImage] = useState<File | null>(null);
+  const [postImagePreview, setPostImagePreview] = useState<string | null>(null);
+  const [editingPostId, setEditingPostId] = useState<string | null>(null);
+  const [postError, setPostError] = useState('');
   const [newProject, setNewProject] = useState({ title: '', tagline: '', description: '', category: 'Animation' });
 
   useEffect(() => {
     getDictionary(lang).then((d) => setDict(d));
   }, [lang]);
 
-  // Load dashboard data once logged in
-  const fetchDashboardData = async () => {
+  // Load dashboard data — the API rejects the request with 401 if there's no
+  // valid session cookie, so this also doubles as the session check.
+  const fetchDashboardData = async (): Promise<boolean> => {
     try {
       const res = await fetch('/api/admin');
-      if (res.ok) {
-        const data = await res.ok ? await res.json() : {};
-        setBlogPosts(data.blogPosts || []);
-        setProjects(data.projects || []);
-        setPartners(data.partners || []);
-        setDownloads(data.downloads || []);
-        setContactMessages(data.contactMessages || []);
-      }
+      if (!res.ok) return false;
+      const data = await res.json();
+      setBlogPosts(data.blogPosts || []);
+      setProjects(data.projects || []);
+      setPartners(data.partners || []);
+      setDownloads(data.downloads || []);
+      setContactMessages(data.contactMessages || []);
+      return true;
     } catch (e) {
       console.error('Fetch dashboard error:', e);
+      return false;
     }
   };
 
   useEffect(() => {
-    if (isLoggedIn) {
-      fetchDashboardData();
-    }
-  }, [isLoggedIn]);
+    fetchDashboardData().then((ok) => {
+      setIsLoggedIn(ok);
+      setCheckingSession(false);
+    });
+  }, []);
 
-  if (!dict) return <div className="min-h-screen flex items-center justify-center font-bold">Loading...</div>;
+  if (!dict || checkingSession) return <div className="min-h-screen flex items-center justify-center font-bold">Loading...</div>;
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,6 +80,8 @@ export default function AdminDashboard({ params }: AdminPageProps) {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        setPassword('');
+        await fetchDashboardData();
         setIsLoggedIn(true);
       } else {
         setAuthError(data.error || 'Login failed');
@@ -81,20 +91,65 @@ export default function AdminDashboard({ params }: AdminPageProps) {
     }
   };
 
-  const handleAddPost = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleLogout = async () => {
     try {
-      const res = await fetch('/api/admin', {
+      await fetch('/api/admin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'add_post', ...newPost }),
+        body: JSON.stringify({ action: 'logout' }),
       });
+    } catch (err) {
+      console.error(err);
+    }
+    setIsLoggedIn(false);
+  };
+
+  const resetPostForm = () => {
+    setNewPost({ title: '', category: 'IA', excerpt: '', content: '' });
+    setPostImage(null);
+    setPostImagePreview(null);
+    setEditingPostId(null);
+    setPostError('');
+  };
+
+  const handleEditPost = (post: any) => {
+    setEditingPostId(post.id);
+    setNewPost({ title: post.title, category: post.category, excerpt: post.excerpt, content: post.content });
+    setPostImage(null);
+    setPostImagePreview(post.coverImage);
+    setPostError('');
+  };
+
+  const handlePostImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
+    setPostImage(file);
+    if (file) setPostImagePreview(URL.createObjectURL(file));
+  };
+
+  const handlePostSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPostError('');
+    const formData = new FormData();
+    formData.append('action', editingPostId ? 'update_post' : 'add_post');
+    if (editingPostId) formData.append('id', editingPostId);
+    formData.append('title', newPost.title);
+    formData.append('category', newPost.category);
+    formData.append('excerpt', newPost.excerpt);
+    formData.append('content', newPost.content);
+    if (postImage) formData.append('image', postImage);
+
+    try {
+      const res = await fetch('/api/admin', { method: 'POST', body: formData });
+      const data = await res.json();
       if (res.ok) {
-        setNewPost({ title: '', category: 'IA', excerpt: '', content: '' });
+        resetPostForm();
         fetchDashboardData();
+      } else {
+        setPostError(data.error || 'Erreur lors de l\'enregistrement');
       }
     } catch (err) {
       console.error(err);
+      setPostError('Erreur réseau');
     }
   };
 
@@ -193,9 +248,6 @@ export default function AdminDashboard({ params }: AdminPageProps) {
               {lang === 'fr' ? 'Se connecter' : 'Log in'}
             </button>
           </form>
-          <div className="text-[10px] font-bold text-center text-deep-green/40 dark:text-off-white/40">
-            {lang === 'fr' ? 'Compte démo : admin@africaimpact.studio / AdminImpact2026!' : 'Demo account: admin@africaimpact.studio / AdminImpact2026!'}
-          </div>
         </div>
       </div>
     );
@@ -217,7 +269,7 @@ export default function AdminDashboard({ params }: AdminPageProps) {
             </p>
           </div>
           <button
-            onClick={() => setIsLoggedIn(false)}
+            onClick={handleLogout}
             className="flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-500 text-xs font-bold border border-red-500/20 cursor-pointer w-fit"
           >
             <LogOut className="w-4 h-4" />
@@ -273,9 +325,9 @@ export default function AdminDashboard({ params }: AdminPageProps) {
               {/* Add form */}
               <div className="lg:col-span-5 flex flex-col gap-4 border-b lg:border-b-0 lg:border-r border-[var(--color-border)]/50 pb-6 lg:pb-0 lg:pr-8">
                 <h3 className="font-display font-bold text-base text-deep-green dark:text-gold mb-2">
-                  Create Blog Post
+                  {editingPostId ? (lang === 'fr' ? 'Modifier l\'article' : 'Edit Blog Post') : (lang === 'fr' ? 'Créer un article' : 'Create Blog Post')}
                 </h3>
-                <form onSubmit={handleAddPost} className="flex flex-col gap-4 text-xs font-semibold">
+                <form onSubmit={handlePostSubmit} className="flex flex-col gap-4 text-xs font-semibold">
                   <div className="flex flex-col gap-1">
                     <label>Title</label>
                     <input
@@ -322,9 +374,49 @@ export default function AdminDashboard({ params }: AdminPageProps) {
                       className="p-2.5 rounded-lg bg-white dark:bg-charcoal-light border border-[var(--color-border)] focus:outline-none resize-none"
                     />
                   </div>
-                  <button type="submit" className="p-2.5 rounded-lg bg-terracotta text-white font-bold hover:bg-terracotta-light transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
-                    <Plus className="w-4 h-4" /> Publish Post
-                  </button>
+                  <div className="flex flex-col gap-1">
+                    <label>{lang === 'fr' ? 'Image de couverture' : 'Cover Image'}</label>
+                    {postImagePreview && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={postImagePreview}
+                        alt="Aperçu"
+                        className="w-full aspect-video object-cover rounded-lg border border-[var(--color-border)] mb-1"
+                      />
+                    )}
+                    <input
+                      type="file"
+                      accept="image/jpeg,image/png,image/webp,image/gif"
+                      onChange={handlePostImageChange}
+                      className="p-2.5 rounded-lg bg-white dark:bg-charcoal-light border border-[var(--color-border)] focus:outline-none file:mr-2 file:px-2 file:py-1 file:rounded-md file:border-0 file:bg-terracotta/10 file:text-terracotta file:font-bold file:cursor-pointer cursor-pointer"
+                    />
+                    <span className="text-[10px] font-medium opacity-60 normal-case">
+                      {lang === 'fr'
+                        ? `JPEG, PNG, WEBP ou GIF, 5 Mo max.${editingPostId ? ' Laisser vide pour garder l\'image actuelle.' : ' Optionnel — une image par défaut sera utilisée sinon.'}`
+                        : `JPEG, PNG, WEBP or GIF, 5MB max.${editingPostId ? ' Leave empty to keep the current image.' : ' Optional — a default image is used otherwise.'}`}
+                    </span>
+                  </div>
+                  {postError && (
+                    <p className="text-xs text-red-500 font-bold bg-red-500/10 p-2.5 rounded-lg border border-red-500/25">
+                      ⚠️ {postError}
+                    </p>
+                  )}
+                  <div className="flex items-center gap-2">
+                    <button type="submit" className="flex-1 p-2.5 rounded-lg bg-terracotta text-white font-bold hover:bg-terracotta-light transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                      {editingPostId ? <Pencil className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                      {editingPostId ? (lang === 'fr' ? 'Mettre à jour' : 'Update Post') : (lang === 'fr' ? 'Publier' : 'Publish Post')}
+                    </button>
+                    {editingPostId && (
+                      <button
+                        type="button"
+                        onClick={resetPostForm}
+                        className="p-2.5 rounded-lg bg-black/5 dark:bg-white/10 font-bold hover:bg-black/10 dark:hover:bg-white/20 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                      >
+                        <X className="w-4 h-4" />
+                        {lang === 'fr' ? 'Annuler' : 'Cancel'}
+                      </button>
+                    )}
+                  </div>
                 </form>
               </div>
 
@@ -352,7 +444,13 @@ export default function AdminDashboard({ params }: AdminPageProps) {
                           </span>
                         </td>
                         <td>{new Date(post.createdAt).toLocaleDateString()}</td>
-                        <td className="text-right">
+                        <td className="text-right whitespace-nowrap">
+                          <button
+                            onClick={() => handleEditPost(post)}
+                            className="p-1.5 text-terracotta hover:bg-terracotta/10 rounded-lg cursor-pointer"
+                          >
+                            <Pencil className="w-4 h-4" />
+                          </button>
                           <button
                             onClick={() => handleDeleteItem('delete_post', post.id)}
                             className="p-1.5 text-red-500 hover:bg-red-500/10 rounded-lg cursor-pointer"
