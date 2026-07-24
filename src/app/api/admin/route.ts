@@ -1,13 +1,11 @@
 // src/app/api/admin/route.ts
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
-import { mkdir, unlink, writeFile } from 'fs/promises';
-import path from 'path';
+import { put, del } from '@vercel/blob';
 import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/db';
 import { createSessionToken, verifySessionToken, SESSION_COOKIE, SESSION_TTL_MS } from '@/lib/session';
 
-const BLOG_UPLOAD_DIR = path.join(process.cwd(), 'public', 'assets', 'blog');
 const DEFAULT_COVER_IMAGE = '/assets/blog/default.svg';
 const MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
 const ALLOWED_IMAGE_TYPES: Record<string, string> = {
@@ -29,6 +27,9 @@ async function requireSession() {
   return session;
 }
 
+// Vercel's production filesystem is read-only, so uploaded images are stored
+// in Vercel Blob (works the same way in local dev, as long as
+// BLOB_READ_WRITE_TOKEN is set — see .env.local).
 async function saveBlogImage(file: File, slugHint: string): Promise<string> {
   if (!ALLOWED_IMAGE_TYPES[file.type]) {
     throw new Error('Unsupported image type. Use JPEG, PNG, WEBP or GIF.');
@@ -36,20 +37,24 @@ async function saveBlogImage(file: File, slugHint: string): Promise<string> {
   if (file.size > MAX_IMAGE_SIZE) {
     throw new Error('Image too large (max 5MB).');
   }
-  await mkdir(BLOG_UPLOAD_DIR, { recursive: true });
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    throw new Error(
+      'Image storage is not configured (missing BLOB_READ_WRITE_TOKEN). Enable Vercel Blob for this project and set the token.'
+    );
+  }
   const ext = ALLOWED_IMAGE_TYPES[file.type];
   const safeSlug = slugHint.replace(/[^a-z0-9-]/g, '') || 'post';
-  const filename = `${safeSlug}-${Date.now()}.${ext}`;
-  const buffer = Buffer.from(await file.arrayBuffer());
-  await writeFile(path.join(BLOG_UPLOAD_DIR, filename), buffer);
-  return `/assets/blog/${filename}`;
+  const pathname = `blog/${safeSlug}-${Date.now()}.${ext}`;
+  const blob = await put(pathname, file, { access: 'public' });
+  return blob.url;
 }
 
-// Best-effort cleanup — never blocks the request if the file is already gone.
+// Best-effort cleanup — never blocks the request, and only ever touches blobs
+// we actually own (never the local default placeholder under /assets).
 async function deleteBlogImageIfOwned(coverImage: string | null | undefined) {
-  if (!coverImage || coverImage === DEFAULT_COVER_IMAGE || !coverImage.startsWith('/assets/blog/')) return;
+  if (!coverImage || coverImage === DEFAULT_COVER_IMAGE || !coverImage.includes('blob.vercel-storage.com')) return;
   try {
-    await unlink(path.join(process.cwd(), 'public', coverImage));
+    await del(coverImage);
   } catch {
     // ignore
   }

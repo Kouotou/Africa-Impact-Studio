@@ -4,7 +4,7 @@
 import React, { useState, useEffect, use } from 'react';
 import { getDictionary } from '@/lib/get-dictionary';
 import { GridPattern, OrganicBlob } from '@/components/brand/PatternBackground';
-import { KeyRound, LogOut, Plus, Trash2, Pencil, X, Mail, FileText, LayoutGrid, Users, Download, Lock } from 'lucide-react';
+import { KeyRound, LogOut, Plus, Trash2, Pencil, X, Mail, FileText, LayoutGrid, Users, Download, Lock, Eye, EyeOff } from 'lucide-react';
 
 interface AdminPageProps {
   params: Promise<{ lang: string }>;
@@ -18,6 +18,7 @@ export default function AdminDashboard({ params }: AdminPageProps) {
   const [checkingSession, setCheckingSession] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [authError, setAuthError] = useState('');
 
   // Dashboard lists
@@ -224,14 +225,28 @@ export default function AdminDashboard({ params }: AdminPageProps) {
               <label className="text-[10px] font-bold uppercase tracking-wider opacity-75">
                 {lang === 'fr' ? 'Mot de passe' : 'Password'}
               </label>
-              <input
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                className="px-4 py-3 rounded-xl bg-white dark:bg-charcoal-light border border-[var(--color-border)] focus:outline-none focus:border-terracotta text-sm font-semibold"
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full px-4 py-3 pr-11 rounded-xl bg-white dark:bg-charcoal-light border border-[var(--color-border)] focus:outline-none focus:border-terracotta text-sm font-semibold"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((v) => !v)}
+                  aria-label={
+                    showPassword
+                      ? lang === 'fr' ? 'Masquer le mot de passe' : 'Hide password'
+                      : lang === 'fr' ? 'Afficher le mot de passe' : 'Show password'
+                  }
+                  className="absolute right-0 top-0 h-full px-3 flex items-center text-deep-green/50 dark:text-off-white/50 hover:text-terracotta cursor-pointer"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
 
             {authError && (
